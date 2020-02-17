@@ -1,0 +1,52 @@
+#samdha_tab #jqueryFileTree_div,
+#samdha_tab #jqueryFileTree_div2 {
+	background: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #BBBBBB;
+	border-right: 1px solid #FFFFFF;
+	border-top: 1px solid #BBBBBB;
+	height: 200px;
+	overflow: scroll;
+	padding: 5px;
+/*	width: 200px;	*/
+}
+#samdha_tab .jqueryFileTree {
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#samdha_tab .jqueryFileTree ul {
+	margin-left: 20px;
+}
+
+#samdha_tab .jqueryFileTree li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+}
+
+#samdha_tab .jqueryFileTree a {
+	color: #333;
+	text-decoration: none;
+	display: block;
+	padding: 0px 2px 0 22px;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+#samdha_tab .jqueryFileTree a.selected,
+#samdha_tab .jqueryFileTree a:hover {
+	background-color: #BDF;
+}
+
+/* Core Styles */
+#samdha_tab .jqueryFileTree a.directory { background-image: url(../img/directory.png); }
+#samdha_tab .jqueryFileTree a.expanded { background-image: url(../img/folder_open.png); }
+#samdha_tab .jqueryFileTree a.file { background-image: url(../img/file.png); }
+#samdha_tab .jqueryFileTree a.wait { background-image: url(../img/spinner.gif); }
+#samdha_tab .jqueryFileTree a.delete { background-image: url(../img/delete.png); }
+#samdha_tab .jqueryFileTree a.readonly { color: red; }

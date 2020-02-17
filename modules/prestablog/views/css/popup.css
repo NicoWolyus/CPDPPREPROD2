@@ -1,0 +1,19 @@
+/**
+ * 2008 - 2019 (c) Prestablog
+ *
+ * MODULE PrestaBlog
+ *
+ * @author    Prestablog
+ * @copyright Copyright (c) permanent, Prestablog
+ * @license   Commercial
+ * @version    4.2.2
+ */
+.popup .list-strong {
+	font-weight: bold;
+}
+
+.bootstrap input[type="text"].text-strong {
+	font-weight: bold;
+}
+
+#popup_form div.mce-tinymce {border: 1px solid #E6E6E6 !important;}

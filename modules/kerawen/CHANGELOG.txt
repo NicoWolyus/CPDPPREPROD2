@@ -1,0 +1,731 @@
+################################
+# v2.0.12 (2018-02-14)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] invoice: add more options
+
+
+Bug fixes:
+[-] log free shipping in NF525
+
+------------------------- REPORTING ---------------------------
+
+Added features:
+[+] Add margin on dashboard and summary sections
+
+
+
+################################
+# v2.0.11 (2018-02-09)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] invoice: add siret, naf, vat intra on footer
+[+] create product: add wholesale price
+[+] Receip/invoice: add left to pay message + payment method
+
+
+################################
+# v2.0.10 (2018-02-05)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] invoice: include PS note
+[+] invoice: add cart number (optional)
+[+] print open/close/stat wih popup preview (optional)
+[+] auto print receipt if total > 25
+[+] improve language selection on cart
+
+Bug fixes:
+[-] quote and discount by quantity
+
+
+################################
+# v2.0.9 (2018-01-26)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+Bug fixes:
+[-] display credit on receipt
+
+
+################################
+# v2.0.8 (2018-01-25)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] quotation fixe bug round and vat margin
+[+] receipt add remain
+[+] receipt add payments even deferred
+
+
+################################
+# v2.0.7 (2018-01-19)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] Add product selection per combination
+[+] Improve search products performance (pagination)
+[+] Invoice no tax: display detail vat inc./ vat excl.
+
+
+################################
+# v2.0.0 (2017-12-21)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] Makes installation compliant with FR law 2015-1785, article 88.
+    Till module (kerawen) requires compliant module (kerawen_legal) included intp zip file, both modules are installed together automatocally.
+
+################################
+# v1.4.0.7 (2017-10-11)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] Adapt quotation to PS1.7 (till only)
+[+] Adapt permissions query to PS1.7
+[+] Invoice by mail
+[+] Loyalty Fidelisa
+[+] Change payment method from order detail
+[+] Product note, order note
+[+] Select Customer from order detail
+[+] Add product to cart from customer section (wishlist, favorites, view, web cart)
+
+
+################################
+# v1.4.0.0 (2017-04-11)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] Add tills permissions by profil/cashier
+
+
+################################
+# v1.3.1.14 (2016-09-10)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] Send email from till when order state changes
+
+Bug fixes:
+[-] Anonymous customer group not always taken into account
+
+
+################################
+# v1.3.1.13 (2016-09-09)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[+] Anonymous customer group taken into account
+
+
+################################
+# v1.3.1.12 (2016-09-05)
+################################
+
+--------------------------- TILL -------------------------------
+
+Added features:
+[+] Product selector in case of barcode conflict
+
+
+################################
+# v1.3.1.11 (2016-08-02)
+################################
+
+--------------------------- TILL -------------------------------
+
+Added features:
+[+] Propose product selection in case of barcode conflict
+
+
+################################
+# v1.3.1.10 (2016-07-25)
+################################
+
+--------------------------- TILL -------------------------------
+
+Improved/changed features:
+[*] Update advanced stock before shipping if necessary
+[*] Manage measured products wholesale price
+[*] Manage several measurement code per product
+[*] Manage measured product stock impact (based on packs)
+
+Bug fixes:
+[-] Check if previous cart has been deleted at startup
+[-] Create new products in accordance with stock configuration
+[-] Fix logs export in case of " in product name
+[-] Manage split orders payment as one
+
+
+################################
+# v1.3.1.9 (2016-07-13)
+################################
+
+--------------------------- TILL -------------------------------
+
+Bug fixes:
+[-] Check if previous cart has been deleted at startup
+[-] Carrier list not consistent with selected shop configuration
+
+
+################################
+# v1.3.1.8 (2016-07-02)
+################################
+
+--------------------------- TILL -------------------------------
+
+Bug fixes:
+[-] Check combination still exists before reinjecting stock
+
+
+################################
+# v1.3.1.7 (2016-06-29)
+################################
+
+--------------------------- TILL -------------------------------
+
+Bug fixes:
+[-] Deactivate temporarly delivery time selection
+
+
+################################
+# v1.3.1.6 (2016-06-28)
+################################
+
+------------------------ BACK OFFICE----------------------------
+
+Bug fixes:
+[-] Do not block specific price toggle
+
+
+################################
+# v1.3.1.5 (2016-06-25)
+################################
+
+--------------------------- TILL -------------------------------
+
+Bug fixes:
+[-] Default delivery address not registered at first installation
+[-] Automatically select first product combination if no default
+
+
+################################
+# v1.3.1.4 (2016-06-15)
+################################
+
+--------------------------- TILL -------------------------------
+
+Added features:
+[+] Facility for entering barcode
+
+
+################################
+# v1.3.1.3 (2016-06-14)
+################################
+
+--------------------------- TILL -------------------------------
+
+Fixed bugs:
+[-] Ensure default delivery address is valid
+
+
+################################
+# v1.3.1.2 (2016-06-03)
+################################
+
+--------------------------- TILL -------------------------------
+
+Fixed bugs:
+[-] File not found
+
+
+################################
+# v1.3.1.1 (2016-06-01)
+################################
+
+--------------------------- TILL -------------------------------
+
+Fixed bugs:
+[-] Incorrect shipping cost for tax excluded orders
+[-] Incorrect payment status when paying/refunding later
+
+
+################################
+# v1.3.1 (2016-05-24)
+################################
+
+--------------------------- TILL -------------------------------
+
+Added features:
+[+] Facility for activating/deactivating tills
+[+] Display price discount on catalog
+[+] Display price discount on cart (from PS 1.6.1)
+[+] Display price without taxes if specified in group
+[+] Add VAT number by address to support sales without taxes (when applicable)
+[+] Support margin taxes (require specific module)
+
+Improved/changed features:
+[*] Enforce cart check in case of cashier sharing
+[*] Add "in use cart" concept to avoid shop switch
+[*] Order products according to position in category
+[*] Apply product discount only on combination
+
+Fixed bugs:
+[-] Stock not decremented when deferred payment mode
+[-] Operation log not complete in case of split order
+
+------------------------- REPORTING ---------------------------
+
+Added features:
+[+] Add inventory evaluation report
+[+] Export spreadsheet report with numbers commas instead of dots
+
+
+################################
+# v1.3.0.0 (2016-04-12)
+################################
+
+Added features:
+[+] Reports provided in separated application
+
+Improved/changed features:
+[*] Base price roundings on global parameter
+[*] Order products within categories
+
+
+################################
+# v1.2.1.26 (2016-03-31)
+################################
+
+Fixed bugs:
+[-] Taxes not computed when based on invoice address
+[-] Cart/product discounts disappears when no cart rule defined
+
+
+################################
+# v1.2.1.25 (2016-03-15)
+################################
+
+Improved/changed features:
+[*] Log module version history
+[*] Do not log dummy payments (free order)
+
+Fixed bugs:
+[-] Abusive deferred refunding when web payment is delayed
+[-] Detailled taxes missing in case of invoice address based computation
+
+
+################################
+# v1.2.1.24 (2016-03-02)
+################################
+
+Improved/changed features:
+[*] Log foreseen mode in case of deferred payment
+
+Fixed bugs:
+[-] Receipts not printed after header image deletion
+[-] Incorrect order paid statuses
+
+
+################################
+# v1.2.1.23 (2016-02-26)
+################################
+
+Fixed bugs:
+[-] Till status not correctly reported (with some versions of MySQL)
+[-] Till reports not correctly printed
+
+
+################################
+# v1.2.1.22 (2016-02-19)
+################################
+
+Added features:
+[+] Integration on CAPTUVO
+
+Fixed bugs:
+[-] First discount not shown in cart
+
+
+################################
+# v1.2.1.21 (2016-02-18)
+################################
+
+Fixed bugs:
+[-] Incorrect cashier name on receipt when it has changed
+[-] Avoid double operations on order state change
+
+
+################################
+# v1.2.1.20 (2016-02-03)
+################################
+
+Improved/changed features:
+[*] Direct external printing of receipt
+[*] EAN-13 searching excludes checksum
+
+Fixed bugs:
+[-] Image on receipt canoot be removed
+[-] Catalog not in accordance with selected shop
+
+
+################################
+# v1.2.1.19 (2016-01-23)
+################################
+
+Fixed bugs:
+[-] Forbid product discount beyond price
+[-] Measures not gathered on invoice 
+
+
+################################
+# v1.2.1.18 (2016-01-21)
+################################
+
+Added features:
+[+] Shipping cost refunding
+
+Improved/changed features:
+[*] Direct printing of receipts
+
+Fixed bugs:
+[-] Logs not saved with Firefox
+
+
+################################
+# v1.2.1.17 (2016-01-12)
+################################
+
+Fixed bugs:
+[-] Pack quantities after sale
+[-] Customer creation with same email
+
+
+################################
+# v1.2.1.16 (2016-01-03)
+################################
+
+Added features:
+[+] Site configuration warnings
+
+Improved/changed features:
+[*] Detail loyalty data on receipts
+
+
+################################
+# v1.2.1.15 (2016-01-01)
+################################
+
+Improved/changed features:
+[*] Display expected payment mode in order detail
+[*] Improve barcode search performance
+
+
+################################
+# v1.2.1.14 (2015-12-31)
+################################
+
+Improved/changed features:
+[*] Display products reference in order detail
+[*] Display & filter according to origin in order list
+
+
+################################
+# v1.2.1.13 (2015-12-30)
+################################
+
+Improved/changed features:
+[*] Display payment history in order detail
+[*] Filter orders according to payment status
+
+
+################################
+# v1.2.1.12 (2015-12-28)
+################################
+
+Fixed bugs:
+[*] Module configuration compliance with PS 1.5.6.X
+
+
+################################
+# v1.2.1.11 (2015-12-23)
+################################
+
+Improved/changed features:
+[*] Indicate number of cheques that can be withdrawn when closing
+
+Fixed bugs:
+[-] Incorrect cheques count in closing receipt
+
+
+################################
+# v1.2.1.10 (2015-12-23)
+################################
+
+Improved/changed features:
+[*] Declare additional payment modes
+
+Fixed bugs:
+[-] Automatic cart rules added with delay
+
+
+################################
+# v1.2.1.9 (2015-12-22)
+################################
+
+Added features:
+[+] Payment modes configuration
+
+Improved/changed features:
+[*] Store ticket image with other images
+[*] Detect necessary upgrade in any controller
+[*] Ensure configuration for all shops
+
+
+################################
+# v1.2.1.8 (2015-12-15)
+# v1.2.1.7 (2015-12-14)
+################################
+
+Improved/changed features:
+[*] Consolidate logs production
+
+
+################################
+# v1.2.1.6 (2015-12-13)
+################################
+
+Fixed bugs:
+[-] Configuration page compliant with PS 1.5
+
+
+################################
+# v1.2.1.5 (2015-12-01)
+################################
+
+Fixed bugs:
+[-] Credits logged twice in case of cancelation/slip
+
+
+################################
+# v1.2.1.4 (2015-11-29)
+################################
+
+Fixed bugs:
+[-] Shop changed to default when cart is reset
+
+
+################################
+# v1.2.1.3 (2015-11-23)
+################################
+
+Improved/changed features:
+[*] Log credit generation
+
+Fixed bugs:
+[-] Product creation in multi-language context
+
+
+################################
+# v1.2.1.2 (2015-11-21)
+################################
+
+Fixed bugs:
+[-] Logs compatibility with PS <= 1.6.0.9
+[-] Update advanced stock when returning products
+
+
+################################
+# v1.2.1.1 (2015-11-19)
+################################
+
+Added features:
+[+] Manage on error order state
+
+Improved/changed features:
+[*] Correct legacy refunding in logs
+
+
+################################
+# v1.2.1 (2015-11-18)
+################################
+
+Added features:
+[+] Option to allow/forbid discounts
+[+] Catalog quick view
+[+] Manage customer loyalty number, group and private note
+[+] Annotate cart and order products, and include notes in receipts, invoices and logs
+[+] Tills management independent of cashier
+[+] Till status
+[+] Aided till opening/closing
+
+Improved/changed features:
+[*] Remind product image and name on related popups
+[*] Catalog loading performance
+[*] Product combination detail on receipts
+[*] Log payments from FO and BO
+[*] Use configuration shop name for receipts
+[*] More options for receipts
+[*] Improved logs
+[*] Correct legacy openings in logs
+
+Fixed bugs:
+[-] Wrong quantities in search product results
+[-] Cannot register payment from Safari
+[-] Sometimes have to pay/refund 0
+[-] Incorrect tax log in case of returns
+
+
+################################
+# v1.2.0 (2015-08-27)
+################################
+
+Added features:
+[+] Detect database needs upgrade
+[+] Manage product returns
+[+] Handle multi-shop configuration
+[+] Handle take away and delivery modes
+[+] Select invoice address, even when customer is not known
+[+] Cashdrawer operations
+[+] Manage weigths and measures
+
+Improved/changed features:
+[*] Access customer creation or information from central icon
+[*] Generate invoice on demand only
+[*] Print ecotax on receipts
+[*] Improved logs
+[*] Extended receipts configuration
+[*] Send standard PrestaShop email on customer creation
+[*] Do not consider barcodes within input fields
+
+
+################################
+# v1.1.10 (2015-04-21)
+################################
+
+Improved/changed features:
+[*] Advanced stock management compliance
+[*] Search product by UPC code
+
+
+################################
+# v1.1.9 (2015-04-07)
+################################
+
+Added features:
+[+] Handle barcode reader preamble
+
+
+################################
+# v1.1.8 (2015-04-07)
+################################
+
+Added features:
+[+] Handle scale barcodes
+
+Improved/changed features:
+[*] Change log name and encoding when downloading
+
+
+################################
+# v1.1.7 (2015-03-27)
+################################
+
+Fixed bugs:
+[-] Cannot add product discount to cart
+
+
+################################
+# v1.1.6 (2015-03-26)
+################################
+
+Added features:
+[+] Detailled orders log per supplier
+
+
+################################
+# v1.1.5 (2015-03-25)
+################################
+
+Improved/changed features:
+[*] Avoid logout/login when changing cashier
+
+
+################################
+# v1.1.4 (2015-03-13)
+################################
+
+Fixed bugs:
+[-] Cannot checkout cart with discount
+
+
+################################
+# v1.1.3 (2015-03-06)
+################################
+
+Improved/changed features:
+[*] Automatic licence registering
+[*] Webservice as admin controller
+[*] SSL compliance
+[*] Load categories and products thumbnails (performance+)
+
+
+################################
+# v1.1.2 (2015-02-13)
+################################
+
+Added features:
+[+] Quick access to module configuration
+[+] Search results indicator
+[+] Define stock quantity when creating a product
+[+] Propose to add to cart anyway when product is out of stock
+
+Improved/changed features:
+[*] Notify when cart has been deleted or checked out
+[*] Update suspended carts when consulted
+[*] Refresh employee daily sales amount after each order
+
+Fixed bugs:
+[-] Avoid some PrestaShop deprecated
+[-] PHP 5.3 compliance
+[-] Check input of product quantity in cart
+
+
+################################
+# v1.1.1 (2015-01-24)
+################################
+
+Added features:
+[+] Default translation comes with application at startup
+
+Fixed bugs:
+[-] Dead lock when employee's current cart has been deleted
+
+
+################################
+# v1.1.0 (2015-01-19)
+################################

@@ -1,0 +1,23 @@
+{
+  "name": "prestashop/htmlblocks",
+  "description": "PrestaShop - HTML Blocks",
+  "homepage": "http://example.com/",
+  "license": "AFL - Academic Free License (AFL 3.0)",
+  "authors": [
+    {
+      "name": "Marek Rost",
+      "email": "marek@tritonit.cz"
+    },
+    {
+      "name": "PrestaShop SA",
+      "email": "contact@prestashop.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "type": "prestashop-module"
+}

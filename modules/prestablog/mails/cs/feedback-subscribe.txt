@@ -1,0 +1,14 @@
+Zpráva z {shop_name}
+
+Váš odběr novinek "{title_news}"
+vás informuje, že nový komentář byl schválen.
+
+K přečtení tohoto komenáře navštivte webovou adresu :
+{url_news}
+
+Jestliže nechcete dále odebírat tyto zprávy, můžete se odhlásit pomocí tohoto odkazu :
+{url_desabonnement}
+
+-----------------
+{shop_url} funguje v systému PrestaShop™
+Tato zpráva byla poslána pomocí modulu PrestaBlog (c)

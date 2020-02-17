@@ -1,0 +1,27 @@
+<div class="pin-img col-md-6 p-0">
+    <img src="http://localhost/mycpdp/img/cms/newpinned.png" alt="newpinned.png"/>
+</div>
+<div class="col-md-6 pl-3 pt-2">
+    <div class="tittle-home-voucher"><h4>Karit&eacute; / Shea</h4></div>
+    <div class="sub-title-home-voucher">
+        <p>Illuminez votre routine beaut&eacute;</p>
+    </div>
+    <div class="text-pin">Ingr&eacute;dient champion de la nutrition pour prendre soin des peaux les plus exigeantes, le
+        karit&eacute; est utilis&eacute; depuis toujours par les africaines pour r&eacute;parer leurs peaux. R&eacute;colt&eacute;
+        &agrave; la main au Ghana, notre karit&eacute; est issu du commerce &eacute;quitable.
+    </div>
+    <a href="#">
+        <div class="link-pin">C'est ici que &ccedil;a se passe !
+    </a>
+</div>
+<div class="home-vouchers col-md-3">
+    <img src="http://localhost/mycpdp/img/cms/gommageoffert.png" width="256" height="311" alt="gommageoffert.png"/>
+    <div class="bloc-voucher">Un gommage corps 150ml<br/>OFFERTE<br/>d&egrave;s 70&euro; d'achat<br/>Code : COCOONING50
+    </div>
+</div>
+    <div class="home-vouchers col-md-3">
+        <img src="http://localhost/mycpdp/img/cms/cremeoffert.png" width="256" height="310" alt="cremeoffert.png"/>
+        <div class="bloc-voucher">Une cr&egrave;me mains 100ml<br/>OFFERTE<br/>d&egrave;s 50&euro; d'achat<br/>Code :
+            COCOONING50
+        </div>
+    </div>

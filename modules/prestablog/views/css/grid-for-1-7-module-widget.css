@@ -1,0 +1,27 @@
+/**
+ * 2008 - 2019 (c) Prestablog
+ *
+ * MODULE PrestaBlog
+ *
+ * @author    Prestablog
+ * @copyright Copyright (c) permanent, Prestablog
+ * @license   Commercial
+ * @version    4.2.2
+ */
+
+/* #displayNav1 */
+/*
+#header .header-nav #displayNav1 {
+    margin-top: 0.9375rem;
+    float: left;
+    margin-right: 10px;
+}
+*/
+
+/* #displayNav2 */
+#header .header-nav #_prestablog_index div {
+	margin-left: 2.5rem;
+	margin-top: 0.9375rem;
+	text-align: right;
+	white-space: nowrap;
+}

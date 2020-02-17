@@ -1,0 +1,403 @@
+#ntbackupandrestore .clear {
+    clear: both !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    display: block !important;
+}
+
+#ntbackupandrestore .onedrive_tree,
+#ntbackupandrestore .aws_tree,
+#ntbackupandrestore .googledrive_tree
+{
+    padding: 0;
+}
+
+#ntbackupandrestore .icon_send_away {
+    line-height: 32px;
+}
+
+#ntbackupandrestore .process_icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 28px;
+    background: transparent;
+    background-size: 26px;
+    background-position: center;
+}
+
+/*#ntbackupandrestore .icon_send_away:before {
+    position: relative;
+    top: 11px;
+    margin-right: 5px;
+}*/
+
+#ntbackupandrestore .panel-heading span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#ntbackupandrestore .send_ftp:before {
+    content:url('../img/s_ftp.png');
+}
+
+#ntbackupandrestore .send_dropbox:before {
+    content:url('../img/dropbox.png');
+}
+
+#ntbackupandrestore .send_owncloud:before {
+    content:url('../img/owncloud.png');
+}
+
+#ntbackupandrestore .send_webdav:before {
+    content:url('../img/webdav.png');
+}
+
+#ntbackupandrestore .send_googledrive:before {
+    content:url('../img/googledrive.png');
+}
+
+#ntbackupandrestore .send_hubic:before {
+    content:url('../img/hubic.png');
+}
+
+#ntbackupandrestore .send_onedrive:before {
+    content:url('../img/onedrive.png');
+}
+
+#ntbackupandrestore .send_aws:before {
+    content:url('../img/aws.png');
+}
+
+#ntbackupandrestore #config_ftp_accounts,
+#ntbackupandrestore #config_dropbox_accounts,
+#ntbackupandrestore #config_owncloud_accounts,
+#ntbackupandrestore #config_hubic_accounts,
+#ntbackupandrestore #config_webdav_accounts,
+#ntbackupandrestore #config_googledrive_accounts,
+#ntbackupandrestore #config_aws_accounts,
+#ntbackupandrestore #config_onedrive_accounts {
+    display: none;
+}
+
+#ntbackupandrestore #check_ftp,
+#ntbackupandrestore #check_dropbox,
+#ntbackupandrestore #check_owncloud,
+#ntbackupandrestore #check_hubic,
+#ntbackupandrestore #check_webdav,
+#ntbackupandrestore #check_googledrive,
+#ntbackupandrestore #check_aws,
+#ntbackupandrestore #check_onedrive {
+    display: none;
+}
+
+#ntbackupandrestore #backup_files p * {
+    float: left;
+}
+
+#ntbackupandrestore #backup_files p span,
+#ntbackupandrestore #backup_files p button {
+    margin-right: 5px;
+}
+
+#ntbackupandrestore #backup_files p span {
+    line-height: 26px;
+}
+
+#ntbackupandrestore #backup_files p .backup_list_content_left {
+    float: left;
+}
+
+#ntbackupandrestore #backup_files p .backup_list_content_right {
+    float: right;
+    width: 20%;
+}
+
+#ntbackupandrestore #backup_files p .backup_comment,
+#ntbackupandrestore #backup_files p .save_comment_backup {
+    float: right;
+}
+
+#ntbackupandrestore #backup_files .backup_comment {
+    display: inline-block;
+    width: 75%;
+}
+
+#ntbackupandrestore #backup_files .backup_size {
+    margin-right: 10px;
+}
+
+#ntbackupandrestore .decoy {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#ntbackupandrestore .list_backup_type {
+    display: none;
+}
+
+#ntbackupandrestore #restore_backup_complete_files {
+    display: block;
+}
+
+#ntbackupandrestore .list_backup_type label,
+#ntbackupandrestore #restore_backup_complete_files label {
+    font-weight: normal;
+}
+
+#ntbackupandrestore .config_send_away_account button.enable {
+    color: #fff;
+    /*background-color: #2eacce;*/
+    background-color: #269421;
+}
+
+#ntbackupandrestore .config_send_away_account button.disable {
+    color: #fff;
+    background-color: #e57421;
+}
+
+#ntbackupandrestore .config_send_away_account button.inactive {
+    /*background-color: #dedede;*/
+    opacity: 0.7;
+}
+
+#ntbackupandrestore .config_send_away_account button.inactive:hover {
+    opacity: 1;
+}
+
+#ntbackupandrestore .config_send_away_account button.active {
+    opacity: 1;
+}
+
+#ntbackupandrestore .config_send_away_account button.active:hover {
+    /*background-color: #00aff0;*/
+    opacity: 0.7;
+}
+
+#ntbackupandrestore .onedrive_tree,
+#ntbackupandrestore .onedrive_tree_child,
+#ntbackupandrestore .aws_tree,
+#ntbackupandrestore .aws_tree_child,
+#ntbackupandrestore .googledrive_tree,
+#ntbackupandrestore .googledrive_tree_child
+{
+    list-style: none;
+}
+
+    #ntbackupandrestore .onedrive_tree input,
+    #ntbackupandrestore .aws_tree input,
+    #ntbackupandrestore .googledrive_tree input
+    {
+        margin-right: 5px;
+    }
+
+#ntbackupandrestore #nt_advanced_config,
+#ntbackupandrestore #nt_advanced_automation
+{
+    width: 100%;
+    border-width: 3px;
+    margin-top: 10px;
+}
+
+#ntbackupandrestore #nt_advanced_config_diplay,
+#ntbackupandrestore #nt_advanced_automation_diplay
+{
+    display: none;
+}
+
+#ntbackupandrestore #automation_2nt_hours,
+#ntbackupandrestore #automation_2nt_minutes
+{
+    width: auto;
+    display: inline-block;
+}
+
+#ntbackupandrestore .deactivate,
+#ntbackupandrestore .deactivate label,
+#ntbackupandrestore .deactivate input,
+#ntbackupandrestore .deactivate select,
+#ntbackupandrestore .deactivate button
+{
+    cursor: not-allowed;
+}
+
+#ntbackupandrestore .deactivate .error.alert.alert-danger
+{
+    display: block;
+}
+
+#ntbackupandrestore .fct_crypt_error,
+#ntbackupandrestore .light_version_error,
+#ntbackupandrestore .curl_warning {
+    margin-bottom: 0;
+}
+
+#ntbackupandrestore #shop_error.error.alert.alert-danger,
+#ntbackupandrestore .fct_crypt_error.error.alert.alert-danger,
+#ntbackupandrestore .light_version_error.error.alert.alert-danger,
+#ntbackupandrestore .curl_warning.warn.alert.alert-warning,
+#ntbackupandrestore #big_website_error,
+#ntbackupandrestore #update_owncloud_pass_error {
+    display: block;
+}
+
+#ntbackupandrestore #shop_error.error.alert.alert-danger span,
+#ntbackupandrestore .fct_crypt_error.error.alert.alert-danger span,
+#ntbackupandrestore .light_version_error.error.alert.alert-danger span,
+#ntbackupandrestore .curl_warning.warn.alert.alert-warning span {
+    font-size: 10px;
+}
+
+#ntbackupandrestore .light_version {
+    opacity: 0.5;
+}
+
+#ntbackupandrestore #nb_keep_backup_dropbox,
+#ntbackupandrestore #nb_keep_backup_googledrive,
+#ntbackupandrestore #nb_keep_backup_hubic,
+#ntbackupandrestore #nb_keep_backup_aws,
+#ntbackupandrestore #nb_keep_backup_onedrive
+{
+    margin-bottom: 10px;
+}
+
+#ntbackupandrestore .error_progress,
+#ntbackupandrestore .success_progress
+{
+	margin-bottom: 15px;
+}
+
+#ntbackupandrestore .error_progress,
+#ntbackupandrestore ul.error_progress li,
+#ntbackupandrestore .error_progress p
+{
+	color: red;
+}
+
+#ntbackupandrestore .success_progress,
+#ntbackupandrestore ul.success_progress li,
+#ntbackupandrestore .success_progress p
+{
+	color: green;
+}
+
+#ntbackupandrestore .sub_backup
+{
+	display: none;
+    list-style: none;
+}
+
+#ntbackupandrestore .list-group-item
+{
+	cursor: pointer;
+}
+
+#ntbackupandrestore #googledrive_tree i,
+#ntbackupandrestore #aws_tree i,
+#ntbackupandrestore #onedrive_tree i
+{
+	margin-left: 5px;
+    cursor: pointer;
+}
+
+#ntbackupandrestore #nt_advanced_automation_tab {
+    list-style: none;
+    float: left;
+    padding: 0;
+    border-bottom: 1px solid #dedede;
+    width: 100%;
+}
+
+#ntbackupandrestore #nt_advanced_automation_tab li {
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#ntbackupandrestore #nt_advanced_automation_tab li:hover,
+#ntbackupandrestore #nt_advanced_automation_tab li.active {
+    background-color: #dedede;
+}
+
+#ntbackupandrestore .nt_aat {
+    display: none;
+}
+
+#ntbackupandrestore #nt_aat_0_content {
+    display: block;
+}
+
+#ntbackupandrestore .cron {
+    color: #00aff0;
+}
+
+#ntbackupandrestore #cron_block {
+    margin: 20px 0;
+}
+
+#ntbackupandrestore #loader_container
+{
+    display: none;
+}
+
+#ntbackupandrestore #loader_container,
+#ntbackupandrestore #loader_container #grey_background
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+#ntbackupandrestore #loader_container #grey_background
+{
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+#ntbackupandrestore #loader_container #loader
+{
+    z-index: 11;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#ntbackupandrestore #loader_container #warning_restoration_running
+{
+    position: relative;
+    z-index: 11;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 35px 35px 35px 115px;
+    display: block;
+}
+
+#ntbackupandrestore #loader_container #restoration_progress
+{
+    position: relative;
+    z-index: 11;
+    font-size: 15px;
+    padding: 15px;
+    display: block;
+}
+
+#ntbackupandrestore #loader_container #warning_restoration_running::before
+{
+    width: 91px;
+    height: 91px;
+    top: 10px;
+    left: 15px;
+}
+
+#ntbackupandrestore #loader_container #restoration_progress::before
+{
+    display: none;
+}

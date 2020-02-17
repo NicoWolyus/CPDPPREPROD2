@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Régénération avancée des miniatures
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="Samdha">
+    <meta name="copyright" content="Samdha">
+    <meta name="date" content="2015-01-15T00:00:00+01:00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+  </head>
+  <body id="top">
+    <div class="container" id="documenter_content">
+      <section>
+        <div class="page-header">
+          <h3>
+            Présentation
+          </h3>
+        </div>
+        <p>
+          "Régénération avancée des miniatures" est un module qui permet de régénérer les miniatures si la méthode de PrestaShop ne fonctionne pas.
+        </p>
+        <p>
+          En utilisant l’AJAX, ce module ne surcharge pas le serveur en lui demande de calculer de nouveau toutes les images en même temps. En effet, ce module les calcule une par une, c'est plus long mais ça fonctionne tout le temps.
+        </p>
+      </section>
+      <section id="installation">
+        <div class="page-header">
+          <h3>
+            Installation du module
+          </h3>
+        </div>
+        <h4 id="installation_install_from_the_administration_panel">
+          Installation à partir du panneau d'administration
+        </h4>
+        <p>
+          C'est la méthode la plus simple, mais elle peut ne pas fonctionner dans certains cas. Si cela ne fonctionne pas, utilisez la méthode d'installation manuelle présenté ci-dessous.
+        </p>
+        <p>
+          Dans l'onglet modules, cliquez sur ajouter un nouveau module.
+        </p>
+        <p>
+          Cliquez sur Parcourir pour ouvrir la boîte de dialogue qui vous permet de rechercher sur votre ordinateur, sélectionnez le fichier puis validez la boîte de dialogue. Enfin, cliquez sur Télécharger ce module.
+        </p>
+        <p>
+          Le module apparaîtra alors dans votre liste des modules sous l'onglet Module.
+        </p>
+        <p>
+          Cliquez sur le bouton Installer pour installer le module.
+        </p>
+        <h4 id="installation_install_a_module_manually">
+          Installer un module manuellement
+        </h4>
+        <p>
+          Utilisez cette méthode si l'installation manuelle ne fonctionne pas. Elle peut sembler fastidieuse, a priori, pour les débutants, parce qu'elle requiert un certain nombre de connaissances en FTP, etc., mais elle n'est pas plus complexe et peut-être même plus pratique car elle fonctionne à chaque fois.
+        </p>
+        <p>
+          En outre, le savoir-faire nécessaire à l'installation est assez basique et c'est quelque chose que tous les gestionnaires de boutique doivent maîtriser.
+        </p>
+        <p>
+          Pour installer manuellement un nouveau module de PrestaShop:
+        </p>
+        <ol>
+          <li>
+            Décompressez le fichier d'archive du module (.zip). Il devrait en résulter un nouveau dossier.
+          </li>
+          <li>
+            En utilisant de votre client FTP, placez le dossier dans votre dossier PrestaShop /modules. Faites attention à ne pas télécharger ce dossier dans le dossier d'un autre module (ce qui peut arriver lorsque l'on fait glisser des éléments). Téléchargez le dossier en entier, pas seulement les fichiers qu'il contient.
+          </li>
+          <li>
+            Accédez à votre back-office, dans l'onglet 'Modules'.
+          </li>
+          <li>
+            Repérez le nouveau module dans la liste des modules. Vous pourriez avoir à faire défiler; vous pouvez également utiliser le moteur de recherche de la liste, qui devrait vous donner une liste mise à jour dynamiquement de la correspondance des noms de modules.
+          </li>
+          <li>
+            Dans la ligne du nouveau module, cliquez sur le bouton «Installer».
+          </li>
+        </ol>
+      </section>
+      <section>
+        <div class="page-header">
+          <h3>Utilisation</h3>
+        </div>
+        <ul>
+          <li>
+            La liste des types d'images pouvant être régénérés apparaît dans l'onglet Régénération de la page de configuration du module
+          </li>
+          <li>
+            Ces types d'images sont classés par catégories, par exemple la catégorie 'Produits' contiendra entre autre le type d'image 'cart_default'
+          </li>
+          <li>
+            Pour faire apparaître les types d'image d'une catégorie il faut cliquer sur son nom
+          </li>
+          <li>
+            Pour lancer la régénération d'un type d'image cliquez sur le bouton ▶ en face de son nom.
+          </li>
+          <li>
+            Vous pouvez mettre en pause ou stopper une régénération en cours ou la reprendre si elle est en pause.
+          </li>
+          <li>
+            Pour régénérer toutes les images d'une catégorie utilisez de la même façon les boutons en face de son nom.
+          </li>
+        </ul>
+        <p>
+          <img src="../views/img/help.png" />
+        </p>
+        <p>
+          Si vous quittez la page de configuration pendant une régénération, le processus est stoppé mais vous pourrez le reprendre là où il en était plus tard.
+        </p>
+      </section>
+      <section>
+        <div class="page-header">
+          <h3>Paramètres</h3>
+        </div>
+        <h4><span id="directory">Dossier de travail</span></h4>
+        <p>Le module créé des fichiers temporaires pendant une régénération. Indiquez ici le dossier où ces fichiers peuvent être créés.
+        </p><p>Si vous modifiez ce dossier alors qu'une régénération est commencé, l'avancement de celle-ci sera perdu.
+        </p>
+        <h4><span id="process">Processus simultanés</span></h4>
+        <p>Lorsque vous lancez la régénération de plusieurs types d'image à la fois, le module peut demander au serveur de traiter plusieurs demandes en même temps. Ceci permet d’accélérer la régénération mais peut surcharger le serveur.
+        </p><p>Si vous constatez des erreurs 500 pendant une régénération, vous pouvez essayer de diminuer cette valeur.
+        </p>
+        <h4><span id="images">Images simultanées</span></h4>
+        <p>Le module peut traiter une ou plusieurs images à chaque demande. Une valeur plus élevée permet d’accélérer la régénération globale mais ralentie le temps de traitement de chaque demande.
+        </p><p>Si vous constatez des erreurs 500 ou de limite de temps dépassée (timeout) pendant une régénération, vous pouvez essayer de diminuer cette valeur.
+        </p><p>Vous pouvez définir cette valeur pour chaque type d'image, ainsi une petite image prend moins de temps à traiter qu'une grande, vous pouvez donc demander au serveur d'en traiter plus à la fois.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
+

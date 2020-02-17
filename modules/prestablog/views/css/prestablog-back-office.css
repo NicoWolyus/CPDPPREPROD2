@@ -1,0 +1,39 @@
+#nav-sidebar ul.menu #subtab-AdminPrestaBlog .material-icons {color: #91bc05 !important}
+
+[id*="pop_colorpicker_"] {
+	 width: 200px!important;
+	 max-width: 100%; 
+	 display: inline-block!important;
+}
+#menu_color, #menu_hover, #menu_link, #read_color, #hover_color, #title_color, #text_color, #menu_link, #link_read, #article_title, #article_text, #block_categories, #block_categories_link, #block_title, #block_btn,#block_btn_hover,#categorie_block_background,#categorie_block_background_hover,#article_background,#article_comment_background
+{
+	width: 200px!important;
+	 max-width: 100%; 
+	 display: inline-block!important;
+}
+[id*="icp_"] {
+	width: 40px!important;
+	max-width: 100%; 
+	display: inline-block!important;
+	margin-top: -4px;
+	height: 31px;
+	margin-left: 2px;
+	border-left: 1px solid #C7D6DB!important;
+	border-radius: 3px!important;
+}
+[id*="pop_opacity_"] {width: 90px!important;}
+
+
+div#configuration_blog .blocmodule #bloccolor .bloccolor {
+		background: #fff;
+	background: linear-gradient(top, #fff 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #fff 0%, #fff 100%);
+	background: -webkit-linear-gradient(top, #fff 0%,#fff 100%);
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.01);
+	padding: 10px 0 0 10px;
+	margin : 0 0 10px 0;
+	border: 1px solid #D9D9D9;
+margin-right: 5px;
+padding-bottom: 10px ;
+padding-right: 10px ;
+}

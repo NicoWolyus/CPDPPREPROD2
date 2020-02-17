@@ -1,0 +1,342 @@
+﻿Release Notes for module PrestaShop 1.7
+Module : PrestaBlog
+[root] = ./modules/prestablog
+[theme] = for all themes : current "grid-for-1-7"
+[pre] = default prefixe for tables installation of PrestaShop : “ps_”
+--------------------------------
+#########################
+#   v4.2.2 - 2019-10-11 #
+#########################
+    Added Features:
+    [+] [root]/controller/blog.php.js.php: fixing urlblog error
+
+#########################
+#   v4.2.1 - 2019-09-18 #
+#########################
+    Added Features:
+    [+] [root]/views/js/menucat.js.php: fixing menu errors about displaying subcategories
+
+#########################
+#   v4.2.0 - 2019-08-06 #
+#########################
+    Added Features:
+    [+] [root]/prestablog.php: fixing issues with the poipup, adding some conditions about loading the JS + general button for displaying the popup
+    [+] [root]/prestablog.php: adding error when the category is not selected in adding the news
+    [+] [root]/views/templates/grid-for-1.7_page-all.tpl : fixing the div of ratings and fixing the "show articles" condition
+    [+] [root]/controllers/blog.tpl : adding submenu JS function
+    [+] [root]/translations : updating translations of all languages
+
+#########################
+#   v4.1.9 - 2019-07-15 #
+#########################
+    Added Features:
+    [+] [root]/prestablog.php: fixing issues due to prestashop 1.7.6 languages errors
+
+#########################
+#   v4.1.8 - 2019-06-17 #
+#########################
+    Added Features:
+    [+] [root]/prestablog.php + tpl: fixing issues
+
+#########################
+#   v4.1.7 - 2019-06-17 #
+#########################
+
+    Added Features:
+    [+] [root]/prestablog.php : fixing issues
+#########################
+#   v4.1.6 - 2019-06-17 #
+#########################
+    MAJOR UPDATE
+    Important features added and changed :
+
+    Added Features:
+    [+] [root]/upgrade/upgrade-4.1.6.php : add upgrade and refresh cache
+    [+] [root]/prestablog.php : adding of the popup system
+    [+] [root]/prestablog.php : fixing issues
+    [+] [root]/prestablog.php : adding to the homepage the config of subblocks
+    [+] [root]/prestablog.php : adding the possibility to rate articles
+    [+] [root]/prestablog.php : fixing popup and upgrade issues
+    [+] [root]/prestablog.php : addings of custom.css + all design content and table
+    [+] [root]/class/news.class.php : adding function for ratings
+    [+] [root]/class/news.class.php : adding table of prestablog's rate + column average rate and number of rates
+    [+] [root]/views/templates/grid-for-1.7_page-unique.tpl + subblocks.php : adding the rating system and hook function + modification of back offices display
+
+#########################
+#   v4.1.5 - 2019-03-18 #
+#########################
+    MAJOR UPDATE
+    Important features added and changed :
+
+    Added Features:
+    [+] [root]/upgrade/upgrade-4.1.5.php : add upgrade and refresh cache
+    [+] [root]/prestablog.php : adding of the popup systeme
+    [+] [root]/class/popup.class.php + views/templates/colorpicker and lite-popup : adding of files connected to the popup system
+    [+] [root]/class/news.class.php and categories.class.php : adding function for displaying the popup
+    [+] [root]/prestablog.php : fixing search comments and articles
+    [+] [root]/prestablog.php : fixing all function depreciated in php 7.2
+    [+] [root]/views/templates/grid-for-1.7_page-unique.tpl : adding the href lang for the SEO
+    [+] [root]/translations : adding polish and danish translation
+
+#########################
+#   v4.1.4 - 2018-11-26 #
+#########################
+    Important features added and changed :
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.1.4.php : add upgrade and refresh cache
+    [+] [root]/translation : Upgrading translation in english and spanish
+    [+] [root]/views/templates/grid-for-1.7_page-unique.tpl : Rel and prev system for better SEO.
+
+#########################
+#   v4.1.3 - 2018-11-02 #
+#########################
+    Important features added and changed :
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.1.3.php : add upgrade and refresh cache
+    [+] [root]views/js/facebook-count.js : Fixing commentaries icon problem
+
+#########################
+#   v4.1.2 - 2018-10-31 #
+#########################
+    Important features added and changed :
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.1.2.php : add upgrade and refresh cache
+    [+] [root]/templates : Changing name for old-grid and fixing template problems due to facebook comment system
+
+#########################
+#   v4.1.1 - 2018-10-18 #
+#########################
+    Important features added and changed :
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.1.1.php : add upgrade and refresh cache
+    [+] [root]/prestablog.php : Adding the fonctionnality of displaying the articles in 1-2-3 columns on the front-office
+    [+] [root]/views/templates/front/grid-for-1-7_page-all.tpl : Adding the conditions for displaying in 1-2-3 columns
+    [+] [root]/views/css/grid-for-1-7-module.css : Customization of the CSS for the different displaying of the columns
+    [+] [root]/views/templates + [root]/views/css : Adding the old grid template for people that want the old display
+
+
+#########################
+#   v4.1.0 - 2018-10-11 #
+#########################
+	Important features added and changed :
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.1.0.php : add upgrade and refresh cache
+    [+] [root]/prestablog.php : Creative slider functionnalities to integrate to the blog
+    [+] [root]/class/displayslider.class.php : Creative slider functionnalities to integrate to the blog
+    [+] [root]/views/hook/displayslider.tpl : Adding the hook to display the slider into the blog
+    [+] [root]/views/front/page.tpl : Adding hook to the code to display the slider
+
+    Fixed bugs:
+
+	[*] [root]/views/js/imagesloaded.pkgd.min: fixed loading of the JS in the front page of the shop for diaplaying articles
+    [*] [root]/prestablog.php: fixing problem of the Wordpress's import XML files
+
+
+#########################
+#   v4.0.7 - 2018-10-02 #
+#########################
+	Important features added and changed :
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.0.7.php : add upgrade and refresh cache
+    [+] [root]/views/templates/front/[theme]_page-unique.tpl : Changing the view of the linked articles and linked products
+    [+] [root]/views/ : adding the masonry JS for a better looking of the articles
+    [+] [root]/views/templates/front/page-all.tpl : major changing of the looking of the articles.
+	[+] [root]/class/news.class.php : title length of the news set up from 80 to 150 characters
+
+    Fixed bugs:
+
+
+
+#########################
+#   v4.0.6 - 2018-04-25 #
+#########################
+
+    Fixed bugs:
+
+    [*] [root]/views/templates/front/page-unique.tpl : fixing the facebook share system that missed when upgraded
+
+#########################
+#   v4.0.5 - 2018-03-27 #
+#########################
+
+    Note:
+
+    Lookbook feature is currently developing and will be available in the future version
+
+    Important features added and changed :
+
+    Added Features:
+
+
+    [+] [root]/upgrade/upgrade-4.0.6.php : add upgrade with add key index
+    [+] [root]/upgrade/upgrade-4.0.6.php : add upgrade and refresh cache
+    [+] [root]/views/templates/front/[theme]_page-unique.tpl : Changing the view of the linked articles
+    [+] [root]/prestablog.php : adding the possibility to delete multiple commentaries
+    [+] [root]/prestablog.php : adding the possibility to search commentaries and articles
+
+    Fixed bugs:
+
+    [*] [root]/prestablog.php: fixed commentary management bug by changing the JS script
+    [*] [root]/prestablog.php: fixed the delete problem when uninstall the module
+
+#########################
+#   v4.0.4 - 2017-10-28 #
+#########################
+
+    Note:
+
+    Lookbook feature is currently developing and will be available in the future version
+
+    Important features added and changed :
+
+    [.]
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.0.4.php : add upgrade with add key index
+    [+] [root]/upgrade/upgrade-4.0.4.php : add upgrade and refresh cache
+
+    Fixed bugs:
+
+    [*] [root]/views/templates/front/[theme]_page-all.tpl : fix SEO !h2 => h1
+    [*] [root]/prestablog.php : fix expand and collapse js with the good path of gif
+    [*] [root]/controllers/front/rss.php : change jpg to png image logo
+    [*] [root]/controllers/front/blog.php : change text in the select option of categories filter search
+
+    Improved/changed features:
+
+    [*] [root]/prestablog.php : delete auto detect registered table for SubBlock
+    [+] [root]/translations/cs.php : add translations for Czech
+    [+] [root]/mails/cs/* : add translations for Czech
+    [*] [root]/views/templates/front/[theme]_page-all.tpl : add mention for show the current categorie title in the count list
+
+--------------------------------
+#########################
+#   v4.0.3 - 2017-07-27 #
+#########################
+
+    Note:
+
+    [.]
+
+    Important features added and changed :
+
+    [.]
+
+    Added Features:
+
+    [+] [root]/class/lookbook.class.php : add lookbook table for link news
+    [+] [root]/mails/it/* : add translations it for mails
+    [+] [root]/translations/it.php : add translations it
+    [+] [root]/upgrade/upgrade-4.0.3.php : add upgrade and refresh cache (installation sql lookbook link)
+    [+] [root]/upgrade/upgrade-4.0.2.php : add upgrade and refresh cache
+
+    Fixed bugs:
+
+    [.]
+
+    Improved/changed features:
+
+    [*] [root]/controllers/admin/AdminPrestaBlogAjaxController.php : better search for ajax search products, articles and lookbooks
+    [+] [root]/prestablog.php : add placeholder for ajax search products, articles and lookbooks
+    [*] [root]/controllers/admin/AdminPrestaBlogAjaxController.php : use PrestaBlog::getT() to get theme name
+    [*] [root]/controllers/front/blog.php : use PrestaBlog::getT() to get theme name
+    [*] [root]/prestablog.php : use self::getT() to get theme name
+    [*] [root]/prestablog.php : use self::imgUpPath() to get path of upload images, excepted loop with theme value
+    [*] [root]/prestablog.php : use self::imgPath() instead deprecated dirname(__FILE__).'/views/img/'
+    [*] [root]/prestablog.php : use $this->confpath instead deprecated $this->path_module_conf
+    [*] [root]/* : compliance of PSR2 PrestaShop 1.7 Validator (standards warnings long lines)
+
+--------------------------------
+#########################
+#   v4.0.2 - 2017-06-01 #
+#########################
+
+    Note:
+
+    The before 4.0.2 is a version dev beta for transition to 4.0.3
+
+#########################
+#   v4.0.1 - 2017-04-25 #
+#########################
+
+    Note:
+
+    [.]
+
+    Important features added and changed :
+
+    [.]
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.0.1.php : add upgrade and refresh cache
+    [+] [root]/prestablog.php : add menu tab in BO
+    [+] [root]/views/css/prestablog-back-office.css : add css for bo header
+
+    Fixed bugs:
+
+    [*] [root]/prestablog.php : fix opengraph for app id facebook
+    [*] [root]/views/templates/hook/[theme]_header-meta-og.tpl : fix opengraph for app id facebook
+    [*] [root]/prestablog.php : fix tiny_mce skins for prestashop
+    [+] [root]/views/js/facebook-count.js : add facebook js for comments count
+    [*] [root]/views/js/facebook.js : fix url facebook comments js
+    [*] [root]/prestablog.php : fix facebook comments js
+    [*] [root]/controllers/front/blog.php : fix facebook comments js
+    [*] [root]/views/templates/hook/[theme]_page-all.tpl : fix facebook comments js
+    [*] [root]/views/templates/hook/[theme]_page-subblock.tpl : fix facebook comments js
+    [*] [root]/prestablog.php : fix complete meta tags on the front controller blog
+    [*] [root]/views/templates/hook/[theme]_page.tpl : add head_seo block for front controller blog meta tags
+    [*] [root]/prestablog.php : change input length with large sufixe in displayConfSlide()
+    [*] [root]/class/categories.class.php : 2 fixes low complexe in(select) in the sql to get groups users
+    [*] [root]/class/correspondancescategories.class.php : fix low complexe in(select) in the sql to get groups users
+    [*] [root]/class/news.class.php : 2 fixes low complexe in(select) in the sql to get groups users
+    [*] [root]/prestablog.php : fix low complexe in(select) in the sql to get groups users
+    [*] [root]/prestablog.php : add static function to fix low complexe in(select) in the sql to get groups users
+
+    Improved/changed features:
+
+    [*] [root]/* : compliance of PSR2 PrestaShop 1.7 Validator (errors & standards)
+    [*] [root]/views/css/admin.css : enable float left style for thumb in articles top list
+    [*] [root]/views/templates/hook/[theme]_bloc-catliste.tpl : change button class link to all articles
+    [*] [root]/views/templates/hook/[theme]_bloc-dateliste.tpl : change button class link to all articles
+    [+] [root]/prestablog.php : detect if configurations _layout_blog, _lb_title_length, _lb_intro_length exists after upgrade 1.6>1.7
+    [*] [root]/prestablog.php : complete meta tags with empty description for no duplicate content
+    [*] [root]/translations/es.php : update translations for lookbook
+    [*] [root]/views/css/[theme]-modules.css : change css for button link to all articles in date & categories blocs
+
+#########################
+#   v4.0.0 - 2017-01-19 #
+#########################
+
+    Note:
+
+    [.]
+
+    Important features added and changed :
+
+    [.]
+
+    Added Features:
+
+    [.]
+
+    Fixed bugs:
+
+    [.]
+
+    Improved/changed features:
+
+    [.]

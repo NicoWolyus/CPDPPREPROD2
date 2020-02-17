@@ -1,0 +1,18 @@
+Mensaje {shop_name}
+
+Para leer este comentario, ir a la dirección de web:
+{url_news}
+
+Fecha: {date}
+Propusieron a un nuevo comentario para las actualidades #id: {news} / {title_news}
+De : {name}
+Url: {url}
+Comentario:
+{comment}
+
+Este comentario es conectado a la actualidad:
+{url_news}
+
+-----------------
+{shop_url} impulsado con PrestaShop ™
+Este mensaje fue enviado usando el módulo PrestaBlog (c)

@@ -1,0 +1,9 @@
+[{shop_name}] 
+
+Bonjour {name_to}, 
+
+Veuillez trouver ci-jointe votre facture au format PDF.
+Vous pouvez aussi vous connecter sur notre site Web pour accèder à vos factures {shop_link}.
+
+
+{shop_address}

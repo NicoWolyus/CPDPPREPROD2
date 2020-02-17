@@ -1,0 +1,14 @@
+Message from {shop_name}
+
+Your subscription for the news "{title_news}"
+informed you to a new comment was approved.
+
+To read this comment, go to the web address :
+{url_news}
+
+If you no longer wish to receive messages for this subscription, you can unsubscribe using this link :
+{url_desabonnement}
+
+-----------------
+{shop_url} powered with PrestaShop™
+This message was sent using the module PrestaBlog (c)

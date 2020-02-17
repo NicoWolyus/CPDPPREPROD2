@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>regeneratethumbnails</name>
+    <displayName><![CDATA[R&eacute;g&eacute;n&eacute;rer les miniatures]]></displayName>
+    <version><![CDATA[2.6.0]]></version>
+    <description><![CDATA[Ce module permet de r&eacute;g&eacute;n&eacute;rer les miniatures si la m&eacute;thode de Prestashop ne fonctionne pas.]]></description>
+    <author><![CDATA[Samdha]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

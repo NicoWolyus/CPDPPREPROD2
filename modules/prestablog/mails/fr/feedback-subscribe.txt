@@ -1,0 +1,14 @@
+Message from {shop_name}
+
+Votre abonnement à la news "{title_news}"
+vous avertie qu'un nouveau commentaire a été approuvé.
+
+Pour lire ce commentaire, rendez-vous à l'adresse suivante :
+{url_news}
+
+Si vous ne souhaitez plus recevoir de notification, merci de vous désabonner à cette adresse :
+{url_desabonnement}
+
+-----------------
+{shop_url} réalisé par PrestaShop™
+Ce message est envoyé avec le module PrestaBlog (c)

@@ -1,0 +1,32 @@
+/**
+ * 2008 - 2017 (c) Prestablog
+ *
+ * MODULE Prestablog
+ *
+ * @author    Prestablog
+ * @copyright Copyright (c) permanent, Prestablog
+ * @license   Commercial
+ * @version    4.2.2
+ */
+
+.popup-content .modal-dialog {max-width: 100%;}
+.popup-content .modal-dialog img, .popup-content .modal-dialog textarea, .popup-content .modal-dialog input,.popup-content .modal-dialog iframe,.popup-content .modal-dialog object,.popup-content .modal-dialog embed,.popup-content .modal-dialog video {
+   max-width: 100%;
+ }
+.popup-content .modal-content {
+	color: #000;
+	max-width: 100%;
+	box-shadow: 0 0 0;
+}
+.popup-content .modal-header, .modal-footer { border: #B8FF00;}
+.popup-content .modal-content .btn-default {
+	color: rgba(255,255,255,1.00);
+}
+.popup-content .modal-body {
+	overflow-y : auto;
+	max-width: 100%;
+}
+.popup-content hr {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}

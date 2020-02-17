@@ -1,0 +1,87 @@
+/**
+ * 2008 - 2017 (c) Prestablog
+ *
+ * MODULE Prestablog
+ *
+ * @author    Prestablog
+ * @copyright Copyright (c) permanent, Prestablog
+ * @license   Commercial
+ * @version    4.2.2
+ */
+
+.popup-content div img, .popup-content div textarea, .popup-content div input,.popup-content div iframe,.popup-content div object,.popup-content div embed,.popup-content div video {
+   max-width: 100%;
+   height: auto;
+ }
+.popup-content div {max-width: 100%;}
+.cf:before,
+.cf:after {
+  content:"";
+  display:table;
+}
+.cf:after {
+  clear:both;
+}
+.droite {
+  float:right;
+}
+
+.popup-content {
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255,255,255,0.58);
+	opacity: 0;
+	display: none;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+}
+
+.popup-content:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.popup-content:target > div {
+  margin: 10% auto;
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+
+.popup-content > div {
+	max-width: 100%;
+  position: relative;
+  margin: 10% auto;
+  padding: 8px 8px 8px 8px;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+
+.popup-content > div header,.popup-content > div footer {
+  border-bottom: 1px solid #e7e7e7;
+  border-radius: 5px 5px 0 0;
+}
+.popup-content footer {
+  border:none;
+  border-top: 1px solid #e7e7e7;
+  border-radius: 0 0 5px 5px;
+}
+
+.popup-content > div h2 {
+  margin:0;
+}
+
+.popup-content > div .btn {
+  float:right;
+}
+
+.popup-content > div section,.popup-content > div > header, .popup-content > div > footer {
+  padding:15px;
+}

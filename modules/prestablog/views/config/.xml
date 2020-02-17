@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+            <theme>
+                <images>
+                    <thumb> <!--Image prevue pour les miniatures dans les listes -->
+                        <width></width>
+                        <height></height>
+                    </thumb>
+                    <slide> <!--Image prevue pour les slides -->
+                        <width></width>
+                        <height></height>
+                    </slide>
+                </images>
+                <categories>
+                    <thumb> <!--Image prevue pour les miniatures des categories -->
+                        <width></width>
+                        <height></height>
+                    </thumb>
+                    <full> <!--Image prevue pour la description de la categorie en liste 1ere page -->
+                        <width></width>
+                        <height></height>
+                    </full>
+                </categories>
+            </theme>

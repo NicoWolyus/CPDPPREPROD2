@@ -1,0 +1,10 @@
+
+[{shop_url}]
+
+Säkerhetskopieringen startade {date_start} klockan {hours_start} och slutade {date_end} klockan {hours_end}.
+
+Meddelande:
+{backup_result}
+
+{shop_name} [{shop_url}]
+

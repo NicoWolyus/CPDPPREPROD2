@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>htmlblocks</name>
+    <displayName><![CDATA[HTML Blocks]]></displayName>
+    <version><![CDATA[0.0.1]]></version>
+    <description><![CDATA[Adds blocks with custom HTML.]]></description>
+    <author><![CDATA[Marek Rost, PrestaShop]]></author>
+    <tab><![CDATA[]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

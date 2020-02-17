@@ -1,0 +1,53 @@
+.message-box {
+    border: 1px solid;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Raleway, 'Helvetica Neue', Verdana, Arial, sans-serif;
+    padding: 5px;
+    margin-bottom: 5%;
+}
+.back-to-top{
+    display:none;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    top: 86%;
+    border-radius: 30px;
+}
+@media(min-width:320px) and (max-width:480px) {
+    .back-to-top{
+      top: 80%;  
+    }
+}
+@media(min-width:480px) and (max-width:786px) {
+    .back-to-top{
+      top: 80%;  
+    }
+}
+
+.vss-more-products {
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #acaaa6;
+    position: relative;
+    padding: 17px;
+    border: 0;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.05);
+    width: 100%;
+    font-family: initial;
+}
+.vss-more-products .vss-down-icon {
+    background: url("../../img/front/arrow-down.png") no-repeat -26px -596px;
+    width: 20px;
+    height: 14px;
+    position: absolute;
+    opacity: .5;
+    left: 49%;
+}

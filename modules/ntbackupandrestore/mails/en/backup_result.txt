@@ -1,0 +1,10 @@
+
+[{shop_url}]
+
+The backup start the {date_start} at {hours_start} and end the {date_end} at {hours_end}.
+
+Message:
+{backup_result}
+
+{shop_name} [{shop_url}]
+

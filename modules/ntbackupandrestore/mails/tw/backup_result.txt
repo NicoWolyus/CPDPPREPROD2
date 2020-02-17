@@ -1,0 +1,10 @@
+
+[{shop_url}]
+
+備份開始 {date_start} 在 {hours_start} 結束 {date_end} 在 {hours_end}。
+
+信息：
+{backup_result}
+
+{shop_name} [{shop_url}]
+

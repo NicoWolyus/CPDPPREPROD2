@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Advanced images regeneration
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="Samdha">
+    <meta name="copyright" content="Samdha">
+    <meta name="date" content="2015-01-15T00:00:00+01:00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+  </head>
+  <body id="top">
+    <div class="container" id="documenter_content">
+      <section>
+        <div class="page-header">
+          <h3>
+            Overview
+          </h3>
+        </div>
+        <p>
+          "Advanced images regeneration" is a module which allows to regenerate thumbnail images if the method of PrestaShop does not work.
+        </p>
+        <p>
+          Using AJAX, this module does not overload the server asks to recalculate all the images at the same time. In this case, this module calculates one by one.
+        </p>
+      </section>
+      <section id="installation">
+        <div class="page-header">
+          <h3>
+            Module Installation
+          </h3>
+        </div>
+        <h4 id="installation_install_from_the_administration_panel">
+          Installing from the administration panel
+        </h4>
+        <p>
+          This is the simplest method, but it may not work in some cases. If this does not work, use the manual installation method presented below.
+        </p>
+        <p>
+          In the Modules tab, click to add a new module.
+        </p>
+        <p>
+          Click Browse to open a dialog box that allows you to search in your computer, select the file and confirm the dialog box. Finally, click Download this module.
+        </p>
+        <p>
+          The module will appear in your list of modules in the Module tab.
+        </p>
+        <p>
+          Click the Install button to install the module.
+        </p>
+        <h4 id="installation_install_a_module_manually">
+          Install a module manually
+        </h4>
+        <p>
+          Use this method if the manual installation does not work. It may seem tedious, a priori, for beginners, because it requires some knowledge of FTP, etc., but it is no more complex and perhaps more convenient because it works every time.
+        </p>
+        <p>
+          In addition, the expertise required for installation is pretty basic and it is something that all store managers must master.
+        </p>
+        <p>
+          To manually install a new PrestaShop module:
+        </p>
+        <ol>
+          <li>
+            Unzip the module archive file (.zip). This should create a new folder.
+          </li>
+          <li>
+            Using your FTP client, place the folder in your PrestaShop folder /modules. Be careful to not upload this folder into the folder of another module (which can happen when you drag elements). Download the entire folder, not just the files in it.
+          </li>
+          <li>
+            Go to your back office, in the tab "Modules".
+          </li>
+          <li>
+            Locate the new module in the module list. You may have to scroll.
+          </li>
+          <li>
+            Click the Install button to install the module.
+          </li>
+        </ol>
+      </section>
+      <section>
+        <div class="page-header">
+          <h3>Usage</h3>
+        </div>
+        <ul><li> The list of the images types which can be regenerated appears in the tab Regeneration of the configuration page of this module
+        </li><li> These types are classified by categories, for example the category 'Products' will contain among others the type 'cart_default'
+        </li><li> To reveal the types of a category it is necessary to click its name
+        </li><li> To start the regeneration of an image type click the button  ▶ in front of its name.
+        </li><li> You can pause or stop a running regeneration or resume it if it is paused.
+        </li></ul>
+        <p><img src="../views/img/help.png" />
+        </p><p>To regenerate all the images of a category use the buttons in front of its name in the same way.
+        </p>
+      </section>
+      <section>
+        <div class="page-header">
+          <h3>Parameters</h3>
+        </div>
+        <h4><span id="directory">Working directory</span></h4>
+        <p>The module creates temporary files during a regeneration. Indicate here the folder where these files can be created.
+        </p><p>If you modify this value while a regeneration is begun, the progress of this one will be lost.
+        </p>
+        <h4><span id="process">Simultaneous processes</span></h4>
+        <p>When you throw the regeneration of several image types at the same time, the module can ask the server to handle several demands at the same time. This allows to accelerate the regeneration but can overload the server.
+        </p><p>If you notice errors 500 during a regeneration, you can try to decrease this value.
+        </p>
+        <h4><span id="images">Simultaneous images</span></h4>
+        <p>The module can handle one or several images in every request. A higher value allows to accelerate the global regeneration but slowed down the processing time of each request.
+        </p><p>If you notice errors 500 or timeout during a regeneration, you can try to decrease this value.
+        </p><p>You can define this value for every type of image, so a small image sets less time to handle that a big one, thus you can ask the server to handle more at the same time.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

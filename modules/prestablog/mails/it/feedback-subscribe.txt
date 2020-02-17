@@ -1,0 +1,14 @@
+Message from {shop_name}
+
+Il tuo abbonamento alle news "{title_news}"
+ti comunica che il nuovo commento è stato approvato.
+
+Per leggere questo commento, vai alla pagina web :
+{url_news}
+
+Se non desideri più ricevere messaggi per questo abbonamento, puoi annullare la sottoscrizione utilizzando questo collegamento :
+{url_desabonnement}
+
+-----------------
+{shop_url} powered with PrestaShop™
+This message was sent using the module PrestaBlog (c)

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/fr/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/fr/blog/feed.xml</link>
+    <description></description>
+    <language>fr</language>
+     <atom:link href="https://www.prestashop.com/fr/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Service client e-commerce : comment se construire une réputation infaillible ?</title>
+    <link>https://www.prestashop.com/fr/blog/service-client-reputation</link>
+    <description>L’objectif d’un service client e-commerce est d’apporter aux clients des solutions appropriées à leurs problèmes afin qu’ils puissent obtenir la valeur promise par le produit ou le service acheté.</description>
+     <pubDate>Thu, 13 Feb 2020 15:54:21 +0100</pubDate>
+ <dc:creator>YATEO</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/service-client-reputation</guid>
+  </item>
+  <item>
+    <title>Comment trouver des produits populaires pour son site e-commerce ?</title>
+    <link>https://www.prestashop.com/fr/blog/produits-tendances-boutique-en-ligne</link>
+    <description>Le succès d’un business dépend de nombreux facteurs comme la structure d’un site, de la capacité à générer un trafic organique, de la fidélité &amp;amp; acquisition des clients, de la conception des fi</description>
+     <pubDate>Mon, 10 Feb 2020 17:17:15 +0100</pubDate>
+ <dc:creator>YATEO</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/produits-tendances-boutique-en-ligne</guid>
+  </item>
+  <item>
+    <title>Quatre types de vidéos pour promouvoir son site web</title>
+    <link>https://www.prestashop.com/fr/blog/videos-promotion-site-web</link>
+    <description>La vidéo, contenu numéro un dans le cœur des internautes, peut devenir un véritable allié pour votre business.</description>
+     <pubDate>Thu, 06 Feb 2020 15:44:01 +0100</pubDate>
+ <dc:creator>Yateo EN</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/videos-promotion-site-web</guid>
+  </item>
+  <item>
+    <title>L’importance de l’IA dans le marketing automation</title>
+    <link>https://www.prestashop.com/fr/blog/marketing-automation-ia</link>
+    <description>Utiliser l&#039;intelligence artificielle pour envoyer les bons messages aux bonnes personnes au bon moment, sans intervention humaine : le point sur cet enjeu clé.</description>
+     <pubDate>Mon, 03 Feb 2020 11:31:27 +0100</pubDate>
+ <dc:creator>Arnaud Becker</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/marketing-automation-ia</guid>
+  </item>
+  <item>
+    <title>KPI : explications et chiffres clés à connaître </title>
+    <link>https://www.prestashop.com/fr/blog/kpi-ecommerce-importants</link>
+    <description>Connaître et comprendre les KPI les plus importants permet à chaque entrepreneur de s’assurer du bon fonctionnement de son entreprise et de sa rentabilité.</description>
+     <pubDate>Thu, 30 Jan 2020 17:35:33 +0100</pubDate>
+ <dc:creator>YATEO</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/kpi-ecommerce-importants</guid>
+  </item>
+  <item>
+    <title>Migrer son site e-commerce vers PrestaShop pour gagner en efficacité et en richesse fonctionnelle</title>
+    <link>https://www.prestashop.com/fr/blog/comment-migrer-vers-prestashop</link>
+    <description>Il y a plusieurs raisons de choisir de faire évoluer son site e-commerce vers une solution open source telle que PrestaShop.</description>
+     <pubDate>Mon, 27 Jan 2020 17:19:26 +0100</pubDate>
+ <dc:creator>Maxime Varinard</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/comment-migrer-vers-prestashop</guid>
+  </item>
+  <item>
+    <title>Comment recueillir l’opinion de vos clients ?</title>
+    <link>https://www.prestashop.com/fr/blog/comment-recueillir-lopinion-de-vos-clients</link>
+    <description>Prêter une attention toute particulière aux commentaires de ses clients et y donner suite est indispensable pour toute entreprise cherchant à fournir aux utilisateurs les produits répondant à leurs</description>
+     <pubDate>Thu, 23 Jan 2020 15:03:19 +0100</pubDate>
+ <dc:creator>YATEO</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/comment-recueillir-lopinion-de-vos-clients</guid>
+  </item>
+  <item>
+    <title>Cinq raisons d’intégrer un module questions/réponses</title>
+    <link>https://www.prestashop.com/fr/blog/5-raisons-module-questions-reponses</link>
+    <description>Lorsqu’il s’agit d’acheter en ligne, les clients sont particulièrement méfiants et se posent de nombreuses questions.</description>
+     <pubDate>Mon, 20 Jan 2020 14:02:21 +0100</pubDate>
+ <dc:creator>YATEO</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/5-raisons-module-questions-reponses</guid>
+  </item>
+  <item>
+    <title>Choisir le meilleur nom de domaine : les clés (Choisir la bonne extension de nom de domaine)</title>
+    <link>https://www.prestashop.com/fr/blog/choisir-nom-de-domaine-cles</link>
+    <description>Avec près de deux milliards de sites web en ligne sur internet, la concurrence pour trouver le nom de domaine le plus attractif est agressive !</description>
+     <pubDate>Fri, 17 Jan 2020 14:07:38 +0100</pubDate>
+ <dc:creator>YATEO</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/choisir-nom-de-domaine-cles</guid>
+  </item>
+  <item>
+    <title>La livraison du futur : à quoi peut-elle ressembler ?</title>
+    <link>https://www.prestashop.com/fr/blog/livraison-du-futur</link>
+    <description>Selon la Fédération du e-commerce et de la vente à distance (Fevad), 550 millions de colis ont été livrés en France sur l’année 2018, soit une augmentation de 10,5% par rapport à 2017.</description>
+     <pubDate>Tue, 14 Jan 2020 18:00:25 +0100</pubDate>
+ <dc:creator>L&#039;équipe PrestaShop</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/livraison-du-futur</guid>
+  </item>
+  </channel>
+</rss>

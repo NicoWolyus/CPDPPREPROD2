@@ -1,0 +1,18 @@
+Message de {shop_name}
+
+Pour lire le commentaire cliquez sur ce lien  :
+{url_news}
+
+Date : {date}
+Un nouveau commentaire est disponible sur #id : {news} / {title_news}
+Auteur : {name}
+Url : {url}
+Commentaire :
+{comment}
+
+Ce commmentaire est attaché à la news :
+{url_news}
+
+-----------------
+{shop_url} réalisé par PrestaShop™
+Ce message est envoyé avec le module PrestaBlog (c)

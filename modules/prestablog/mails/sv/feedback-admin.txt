@@ -1,0 +1,18 @@
+Meddelande från {shop_name}
+
+För att läsa den här kommentaren, gå till webbadressen :
+{url_news}
+
+Datum : {date}
+En ny kommentar har föreslagits för nyhet #id : {news} / {title_news}
+Från : {name}
+URL: {url}
+Kommentar :
+{comment}
+
+Denna kommentar är bifogad i nyheterna :
+{url_news}
+
+-----------------
+{shop_url} powered with PrestaShop™
+Det här meddelandet har skickats med modulen PrestaBlog (c)

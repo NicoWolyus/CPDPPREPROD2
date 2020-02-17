@@ -1,0 +1,18 @@
+Message from {shop_name}
+
+To read this comment, go to the web address :
+{url_news}
+
+Date : {date}
+A new comment was proposed for the news #id : {news} / {title_news}
+From : {name}
+Url : {url}
+Comment :
+{comment}
+
+This comment is attached to the news :
+{url_news}
+
+-----------------
+{shop_url} powered with PrestaShop™
+This message was sent using the module PrestaBlog (c)

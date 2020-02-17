@@ -1,0 +1,23 @@
+/* Module KerAwen */
+
+.kerawen-delivery-mode.selected {
+	background-color: blue;
+}
+#kerawen-delivery-mode-cart {
+	margin-top: 30px;
+}
+#kerawen-delivery-mode-cart span {
+	float: right;
+}
+#uniform-id_address_invoice {
+	margin-bottom: 15px;
+}
+#center_column>.order_delivery {
+	display: none;
+}
+.order_carrier_content>.carrier_title {
+	display: none;
+}
+.order_carrier_content .carrier_title {
+	margin-bottom: 17px;
+}

@@ -1,0 +1,10 @@
+
+[{shop_url}]
+
+Din backup starter den {date_start} kl. {hours_start} og slutter den {date_end} kl. {hours_end}.
+
+Besked:
+{backup_result}
+
+{shop_name} [{shop_url}]
+

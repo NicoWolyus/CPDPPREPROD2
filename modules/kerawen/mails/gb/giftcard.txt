@@ -1,0 +1,16 @@
+[{shop_name}] 
+
+Bonjour {name_to}, 
+
+Vous avez reçu une carte cadeau d'un montant de {amount} de la part de {name_from}.
+Vous pouvez l'utiliser en magasin ou sur notre site Internet : {shop_url}
+
+Message de la part de {name_from} :
+{message} 
+
+Information de la carte cadeau :
+Montant : {amount}
+Code : {code}
+Date d'expiration : {expiry_date}
+
+{shop_address}

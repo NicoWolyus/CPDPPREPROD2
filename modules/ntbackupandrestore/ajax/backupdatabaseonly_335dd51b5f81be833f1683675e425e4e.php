@@ -1,0 +1,1 @@
+<?php header("Location: https://compagnie-de-provence.thegeek.family/modules/ntbackupandrestore/ajax/backupdatabaseonly.php?secure_key=335dd51b5f81be833f1683675e425e4e"); exit();

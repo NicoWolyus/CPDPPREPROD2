@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>adelyaapi</name>
+    <displayName><![CDATA[Loyalty Operator integration]]></displayName>
+    <version><![CDATA[1.3.0]]></version>
+    <description><![CDATA[Ce module ajoute un lien entre Adelya Loyalty Operator et votre prestashop]]></description>
+    <author><![CDATA[Adelya SAS]]></author>
+    <tab><![CDATA[others]]></tab>
+	<confirmUninstall><![CDATA[Êtes-vous sûr(e) de vouloir désinstaller ? Le lien entre Prestashop et Adelya sera perdu]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>kerawen</name>
+    <displayName><![CDATA[KerAwen]]></displayName>
+    <version><![CDATA[2.2.14.2]]></version>
+    <description><![CDATA[Une caisse omni-canal intuitive et puissante. Conforme &agrave; la loi FR 2015-1785, article 88.]]></description>
+    <author><![CDATA[KerAwen]]></author>
+    <tab><![CDATA[others]]></tab>
+	<confirmUninstall><![CDATA[Confirmer la désinstallation]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

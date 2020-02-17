@@ -1,0 +1,15 @@
+{
+"Drawer":"Caisse",
+"Report":"Pilotage",
+"Labels":"Etiquettes",
+"Back office":"Back office",
+"Help":"Aide",
+"Logout":"Se déconnecter",
+"For a better user experience we recommend you to use Chrome browser.":"Pour une meilleure expérience utilisateur, nous vous recommandons d'utiliser le navigateur Chrome",
+"Download Chrome browser":"Télécharger le navigateur Chrome",
+"Reassortment":"Réassort",
+"Hardware":"Matériel",
+"Compliance":"Conformité",
+"Read more":"Lire la suite",
+"_":"_"
+}

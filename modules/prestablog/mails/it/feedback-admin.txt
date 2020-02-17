@@ -1,0 +1,18 @@
+Messaggio da {shop_name}
+
+Per leggere questo commento, vai all'indirizzo del web :
+{url_news}
+
+Data : {date}
+Un nuovo commento è stato proposto per la news #id : {news} / {title_news}
+Da : {name}
+Url : {url}
+Commento :
+{comment}
+
+Questo Commento è allegato alla news :
+{url_news}
+
+-----------------
+{shop_url} powered with PrestaShop™
+This message was sent using the module PrestaBlog (c)

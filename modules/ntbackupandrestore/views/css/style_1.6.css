@@ -1,0 +1,71 @@
+.icon-NTModules {
+    background-image: url('../img/tab_logo_grey.png');
+    width: 16px !important;
+    height: 16px !important;
+}
+
+#ntbackupandrestore .clear
+{
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+#ntbackupandrestore .hide
+{
+	display: none !important;
+}
+
+#ntbackupandrestore .error,
+#ntbackupandrestore .confirm
+{
+	display: none;
+}
+
+#ntbackupandrestore #nt_tab_content
+{
+	margin-top: 20px;
+}
+
+#ntbackupandrestore .tab
+{
+	display: none;
+}
+
+#ntbackupandrestore #nt_tab0_content
+{
+	display: block;
+}
+
+#ntbackupandrestore #nt_tab1_content p>label
+{
+	padding-top: 10px;
+}
+
+#ntbackupandrestore #nt_tab1_content p>label:first-of-type
+{
+	padding-top: 0;
+}
+
+#ntbackupandrestore #nt_tab1_content p .switch
+{
+	margin:0;
+}
+
+#ntbackupandrestore #download_links
+{
+	display: none;
+}
+
+#backup_progress_panel
+{
+	display: none;
+}
+
+#backup_progress{
+	font-weight: 700;
+}
+
+.switch{
+	margin-top: 10px;
+}
+

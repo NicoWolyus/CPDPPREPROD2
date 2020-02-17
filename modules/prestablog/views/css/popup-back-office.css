@@ -1,0 +1,30 @@
+/**
+ * 2008 - 2019 (c) Prestablog
+ *
+ * MODULE PrestaBlog
+ *
+ * @author    Prestablog
+ * @copyright Copyright (c) permanent, Prestablog
+ * @license   Commercial
+ * @version    4.2.2
+ */
+
+#nav-sidebar ul.menu #subtab-AdminPrestaBlog .material-icons {color: #00aff0 !important}
+
+
+[id*="pop_colorpicker_"] {
+	 width: 200px!important;
+	 max-width: 100%;
+	 display: inline-block!important;
+}
+[id*="icp_pop_colorpicker_"] {
+	width: 40px!important;
+	max-width: 100%;
+	display: inline-block!important;
+	margin-top: -4px;
+	height: 31px;
+	margin-left: 2px;
+	border-left: 1px solid #C7D6DB!important;
+	border-radius: 3px!important;
+}
+[id*="pop_opacity_"] {width: 90px!important;}

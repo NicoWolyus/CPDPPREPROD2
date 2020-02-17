@@ -1,0 +1,18 @@
+Zpráva z {shop_name}
+
+K přečtení tohoto komenáře navštivte webovou adresu :
+{url_news}
+
+Datum : {date}
+Nový komentář byl navržen pro zprávu #id : {news} / {title_news}
+Od: {name}
+Url : {url}
+Komentář :
+{comment}
+
+Tento komentář je připojen ke zprávám :
+{url_news}
+
+-----------------
+{shop_url} funguje v systému PrestaShop™
+Tato zpráva byla poslána pomocí modulu PrestaBlog (c)

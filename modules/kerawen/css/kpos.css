@@ -1,0 +1,21 @@
+#HOOK_BEFORECARRIER>table>tbody>tr>td.delivery_time_radio {
+	width: 54px;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+}
+
+#HOOK_BEFORECARRIER>table>tbody>tr>td.delivery_time_logo {
+	width: 97px;
+	padding-left: 21px;
+}
+
+p.delivery_time_title {
+	font-weight: bold;
+	color: #333333;
+	margin-bottom: 17px;
+}
+
+div.addresses.clearfix>div:nth-child(1)>div:nth-child(2) {
+	margin-bottom: 15px;
+}

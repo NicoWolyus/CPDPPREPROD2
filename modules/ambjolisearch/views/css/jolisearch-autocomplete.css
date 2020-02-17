@@ -1,0 +1,211 @@
+/*
+	(c) 2013-2015 Ambris Informatique
+
+	@module     	Advanced search (AmbJoliSearch)
+	@file 			ambjoliautocomplete.css
+	@subject		style de la liste de suggestions (en haut de page)
+	@copyright  	Copyright (c) 2013 Ambris Informatique SARL (http://www.ambris.com/)
+	@author     	Richard Stefan (@RicoStefan)
+	@license    	Commercial license
+	Support by mail: support@ambris.com
+
+	suggest (autocomplete) list style
+*/
+/* loading results */
+.ui-autocomplete-loading {
+	background-image: url('../img/indicator.gif') !important;
+	background-repeat: no-repeat !important;
+	background-position: 80% center !important;
+	padding-right: 5px;
+}
+/* z-index to display list over the others elements */
+.ui-autocomplete {
+	z-index: 9999 !important;
+}
+
+@media (max-width: 768px){
+	.ui-menu {
+		border: 1px solid #a0a0a0;
+		background-color: #ffffff;
+		border-radius: 3px;
+		box-shadow: 3px 3px 10px rgba(100,100,100,0.9);
+		width: 80vw !important;
+		min-width: 300px;
+	}
+}
+
+@media (min-width: 768px){
+	.ui-menu {
+		border: 1px solid #a0a0a0;
+		background-color: #ffffff;
+		border-radius: 3px;
+		box-shadow: 3px 3px 10px rgba(100,100,100,0.9);
+		width: auto !important;
+		min-width: 300px;
+	}
+}
+/* item style */
+.ui-menu-item {
+	position: relative;
+	background-color: #ffffff;
+	clear: left;
+}
+/* anchor in item */
+.ui-menu .ui-menu-item a {
+	padding: 2px;
+}
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active {
+	margin: 0;
+}
+
+/* corners style for anchor in item */
+.ui-menu .ui-menu-item a.ui-corner-all {
+	border: 1px solid transparent;
+}
+/* style when anchor is flown-over by mouse or via keyboard */
+.ui-menu .ui-menu-item a:hover,
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-hover
+{
+	border: 1px solid rgb(255, 184, 0);
+	border-radius: 2px;
+	background: rgb(255, 184, 0) !important;
+}
+
+/* image style for item */
+.ui-menu .ui-menu-item .jolisearch-image {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px;
+	max-width: 45px;
+	max-height: 45px;
+}
+
+/* container of text fields */
+.ui-menu .ui-menu-item div.jolisearch-description {
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	padding: 0px 3px 0px 3px;
+}
+/* text fields in container are include in spans */
+.ui-menu .ui-menu-item .jolisearch-description span {
+	padding-top: 2px;
+	padding-left: 5px;
+	font-size: 1.0em;
+}
+
+/* prefix for main text of item (usually manufacturer) */
+.ui-menu .ui-menu-item span.jolisearch-pre {
+	padding-top: 4px;
+	position: relative;
+	display: inline-block;
+}
+/* separator between prefix and main text */
+.ui-menu .ui-menu-item span.jolisearch-pre:after {
+	content: '-';
+	padding: 0 3px 0 3px;
+}
+/* main text of item (usually product name) */
+.ui-menu .ui-menu-item span.jolisearch-name {
+	display: inline-block;
+}
+
+/* postfix for main text of item (usually category) */
+.ui-menu .ui-menu-item span.jolisearch-post {
+	color: #a0a0a0;
+	position: relative;
+	display: block;
+}
+
+.ui-menu .ui-menu-item span.jolisearch-features {
+	color: #a0a0a0;
+	position: relative;
+	display: block;
+}
+
+/* separator style between list items */
+.ui-menu li+li:before {
+	content: ' ';
+	display: block;
+	width:75%;
+	height: 1px;
+	margin-left: 50px;
+	margin-right: auto;
+	margin-top: 1px;
+	border-top: 1px solid #dddddd;
+}
+
+.ui-menu .ui-menu-item .jolisearch-post-right {
+	position: relative;
+	text-align: right;
+	margin-right:5%;
+	margin-top:-22px;
+	font-size:13px;
+	height:22px;
+	/*float:right;*/
+}
+
+/* title for items group (usually manufacturers, products, categories) */
+/* simple style with no ribbon
+.ui-menu .ui-menu-item span.jolisearch-title {
+	display: block;
+	font-size: 16px;
+	line-height: 20px;
+	color: #ffffff;
+	background-color: black;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-left: 48px;
+}
+*/
+/* style with ribbon */
+.ui-menu .ui-menu-item span.jolisearch-title {
+	padding: 6px 8px;
+	font-size: 12px;
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+	text-transform: uppercase;
+	background: #383838;
+	display: inline-block;
+	margin-left: -15px;
+	border-radius: 2px 2px 0px 0px;
+	position: relative;
+	box-shadow: 1px 3px 7px rgba(50,50,50,0.5);
+	z-index: 30;
+	margin-top: 3px;
+	margin-bottom: -2px;
+}
+.ui-menu .ui-menu-item span.jolisearch-title:after {
+	content: ' ';
+	display: inline-block;
+	float: left;
+	width: 1px;
+	height: 1px;
+	border-bottom: 7px solid transparent;
+	border-right: 12px solid #aaa;
+	position: absolute;
+	bottom: -8px;
+	left: 0px;
+}
+/* remove separator for items with group title */
+.ui-menu li+li.jolisearch-container:before {
+	content: ' ';
+	display: block;
+	width:100%;
+	height: 1px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 1px;
+	border-top: 1px none #dddddd;
+}
+
+.ui-menu .jolisearch-description.manufacturer,
+.ui-menu .jolisearch-description.category {
+	line-height:3em;
+}
+
+
+

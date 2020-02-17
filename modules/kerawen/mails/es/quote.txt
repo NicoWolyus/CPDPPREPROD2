@@ -1,0 +1,14 @@
+[{shop_name}] 
+
+Bonjour {name_to}, 
+
+Veuillez trouver ci-ointe votre devis au format PDF : {quote_title}.
+Vous pouvez aussi vous connecter sur notre site Web {shop_link} pour valider votre commande.
+
+
+Information devis :
+Montant : {amount}
+Id : {code}
+Date d'expiration : {expiry_date}
+
+{shop_address}

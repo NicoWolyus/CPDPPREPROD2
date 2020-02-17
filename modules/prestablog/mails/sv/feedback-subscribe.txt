@@ -1,0 +1,14 @@
+Meddelande från {shop_name}
+
+Din prenumeration för nyheter "{title_news}"
+information till dig om att din nya kommentar godkändes.
+
+För att läsa den här kommentaren, gå till webbadressen :
+{url_news}
+
+Om du inte längre vill ta emot meddelanden för detta abonnemang, kan du avsluta prenumerationen genom att använda denna länk :
+{url_desabonnement}
+
+-----------------
+{shop_url} powered with PrestaShop™
+Det här meddelandet har skickats med modulen PrestaBlog (c)

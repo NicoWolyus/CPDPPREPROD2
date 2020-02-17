@@ -1,0 +1,10 @@
+/* Module KerAwen */
+
+.bootstrap .inline input[type="text"],
+.bootstrap .inline .switch {
+	display: inline-block;
+	width: initial;
+}
+.bootstrap .inline .switch {
+	vertical-align: bottom;
+}

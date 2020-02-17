@@ -1,0 +1,71 @@
+/* -------------- */
+/* Module KerAwen */
+
+/* Back-Office menu */
+i.icon-KerawenMain {
+	min-width: 1.2em;
+	background-image: url("../img/logo-menu.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+i.icon-KerawenMain:before {
+	content: "\00a0";
+}
+
+/* ------------------ */
+/* Configuration page */
+
+/* Payment block */
+div.kerawen-config-payment-block {
+	display: inline-block;
+	width: 12em;
+	text-align: center;
+}
+input.kerawen-config-payment-input {
+	margin-top: -5px;
+	text-align: right;
+}
+
+/* ------------------ */
+/* Permissions page */
+
+.perm-main-table {
+	width: 100%;
+	clear:both;
+	margin: 0 0 45px 0;
+}
+
+.perm-main-table tr td,
+.perm-sub-table tr td  {
+	vertical-align: top;
+	text-align: left;
+}
+
+.perm-row {
+	background : #f4f8fb;
+}
+
+
+.perm-main-table tr td {
+	padding: 4px;
+	border-bottom: 1px solid #ccc;
+}
+
+.perm-sub-table tr td {
+	border: none;
+}
+
+.perm-sub-table tr td.perm-col-subtitle {
+	width : 120px;
+}
+
+.perm-sub-table tr td.perm-col-subtitle label {
+	font-weight: normal!important;
+}
+
+.perm-col-title {
+	width: 160px;
+	padding: 8px 4px!important;
+	font-weight: bold; 
+}

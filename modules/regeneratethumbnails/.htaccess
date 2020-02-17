@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+<IfModule mod_env.c>
+SetEnv HTTP_MOD_REWRITE On
+</IfModule>
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ views/index.php [L]
+
+</IfModule>
+
+#If rewrite mod isn't enabled
+ErrorDocument 404 views/index.php

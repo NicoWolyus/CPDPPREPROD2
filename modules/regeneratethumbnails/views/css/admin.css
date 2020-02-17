@@ -1,0 +1,57 @@
+#samdha_warper .ui-progressbar {
+	position: relative;
+	height: 2em;
+	margin-bottom: 0;
+}
+#samdha_warper .ui-progressbar .text {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	top: 4px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+#samdha_warper .regeneratethumbnails_log {
+	display: none;
+}
+
+#samdha_warper .samdha_button.disable {
+	opacity: 0.2;
+	cursor: not-allowed;
+}
+
+#samdha_warper .regeneratethumbnails_log div {
+	max-height: 100px;
+	overflow: scroll;
+}
+
+#samdha_warper .image_type td {
+	border-top: solid 1px #C8C8C8;
+}
+
+#samdha_warper .type_expand,
+#samdha_warper .global_expand {
+	cursor: pointer;
+}
+
+#samdha_warper .type_expand .ui-icon-triangle-1-e,
+#samdha_warper .global_expand .ui-icon-triangle-1-e {
+	display: none;
+}
+
+#samdha_warper .type_expand .ui-icon-triangle-1-s,
+#samdha_warper .global_expand .ui-icon-triangle-1-s {
+	display: inline-block;
+}
+
+#samdha_warper .type_expand.not_expanded .ui-icon-triangle-1-e,
+#samdha_warper .global_expand.not_expanded .ui-icon-triangle-1-e {
+	display: inline-block;
+}
+
+#samdha_warper .type_expand.not_expanded .ui-icon-triangle-1-s,
+#samdha_warper .global_expand.not_expanded .ui-icon-triangle-1-s {
+	display: none;
+}

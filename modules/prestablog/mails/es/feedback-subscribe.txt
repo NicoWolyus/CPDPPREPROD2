@@ -1,0 +1,13 @@
+Mensaje {shop_name}
+
+Su suscripción para las actualidades " {title_news} " informó que usted a un nuevo comentario fue aprobado.
+
+Para leer este comentario, ir a la dirección de web:
+{url_news}
+
+Si usted más desea recibir mensajes para esta suscripción, usted puede insuscribir utilizando este lazo:
+{url_desabonnement}
+
+-----------------
+{shop_url} impulsado con PrestaShop ™
+Este mensaje fue enviado usando el módulo PrestaBlog (c)
