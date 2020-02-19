@@ -240,9 +240,10 @@ ul.related_blog_product li {
 }
 
 /** If an image is wrapped in a link  */
+.prestablog_slide .nivoSlider img, .productslinks .nivoSlider img{width: 269px;height: 330px;}
 .prestablog_slide .nivoSlider a.nivo-imageLink {
-	position:absolute;top:0px;left:0px;width:100%;
-	border:0;padding:0;margin:0;z-index:6;display:none; overflow:hidden; height: 100%;}
+	position:absolute;top:0px;left:0px;width:269px;
+	border:0;padding:0;margin:0;z-index:6;display:none; overflow:hidden; height: 330px;}
 
 .prestablog_slide .nivoSlider img, .productslinks .nivoSlider img {display:none;position:absolute;top:0px;left:0px;max-width: none;}
 .prestablog_slide .nivo-main-image, .productslinks .nivo-main-image {display: block !important;position: relative !important; width: 100% !important;}

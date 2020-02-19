@@ -90,8 +90,8 @@
     {/block}
 
     {if $page.page_name == 'index'}
-        [creativeslider id="5"]
-        [creativeslider id="1"]
+        [creativeslider id="3"]
+        [creativeslider id="2"]
     {/if}
 
 

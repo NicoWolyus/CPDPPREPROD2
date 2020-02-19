@@ -124,7 +124,7 @@
                   {/block}
 
                   {block name='product_discounts'}
-                    {include file='catalog/_partials/product-discounts.tpl'}
+                    {include file='catalog/nivo-caption_partials/product-discounts.tpl'}
                   {/block}
 
                   {block name='product_add_to_cart'}
@@ -145,22 +145,28 @@
             {block name='hook_display_reassurance'}
               {hook h='displayReassurance'}
             {/block}
-
+          </div>
+        </div>
+    </div>
+  </section></div></nav>
+      <div class="row">
+          <div class="col-md-12">
+              <div>
             {block name='product_tabs'}
               <div class="tabs">
-                <ul class="nav nav-tabs" role="tablist">
-                  {if $product.description}
-                    <li class="nav-item">
-                       <a
-                         class="nav-link{if $product.description} active{/if}"
-                         data-toggle="tab"
-                         href="#description"
-                         role="tab"
-                         aria-controls="description"
-                         {if $product.description} aria-selected="true"{/if}>{l s='Description' d='Shop.Theme.Catalog'}</a>
+                  {*   <ul class="nav nav-tabs" role="tablist">
+                 {if $product.description}
+                      <li class="nav-item">
+                         <a
+                           class="nav-link{if $product.description} active{/if}"
+                           data-toggle="tab"
+                           href="#description"
+                           role="tab"
+                           aria-controls="description"
+                           {if $product.description} aria-selected="true"{/if}>*}{l s='En quelques mots' d='Shop.Theme.Catalog'}{*</a>
                     </li>
-                  {/if}
-                  <li class="nav-item">
+                  {/if}*}
+               {*    <li class="nav-item">
                     <a
                       class="nav-link{if !$product.description} active{/if}"
                       data-toggle="tab"
@@ -188,7 +194,7 @@
                         role="tab"
                         aria-controls="extra-{$extraKey}">{$extra.title}</a>
                     </li>
-                  {/foreach}
+                  {/foreach}*}
                 </ul>
 
                 <div class="tab-content" id="tab-content">

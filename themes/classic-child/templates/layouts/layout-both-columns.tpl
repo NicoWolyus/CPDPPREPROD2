@@ -54,7 +54,7 @@
 
       <section id="wrapper">
         {hook h="displayWrapperTop"}
-        <div class="container">
+        <div class="container" id="cat-reup">
           {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
           {/block}

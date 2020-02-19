@@ -32,7 +32,7 @@
   {if $msg}
     <p class="notification {if $nw_error}notification-error{else}notification-success{/if}">{$msg}</p>
   {/if}
-  <input type="button" id="newsletter"  value="C'est parti" onClick="open('https://qa.adelya.com:443/Adelyaview/composants/newsletter/subscribe.jsp?l=fr&code=G81570362','other','top=100,left=700,width=480,height=800,status=no,scrollbars=yes').focus();" />
+  <input type="button" id="newsletter"  value="C'est parti" onClick="open('https://qa.adelya.com/Adelyaview/newslettercdp/signup/Newsletter.html?lang={$language.iso_code}&goto=confirm','other','top=100,left=700,width=480,height=800,status=no,scrollbars=yes').focus();" />
 <div class="up-be"></div>
 </div>
 
