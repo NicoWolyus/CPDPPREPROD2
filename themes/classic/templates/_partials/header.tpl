@@ -30,6 +30,7 @@
 
 {block name='header_nav'}
   <nav class="header-nav">
+    {hook h='displayNavFullWidth'}
     <div class="container">
       <div class="row">
         <div class="hidden-sm-down">
@@ -86,5 +87,5 @@
       </div>
     </div>
   </div>
-  {hook h='displayNavFullWidth'}
+
 {/block}

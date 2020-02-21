@@ -1,9 +1,9 @@
 <!-- MODULE PM_AdvancedTopMenu || Presta-Module.com -->
 {if !isset($advtmThemeCompatibility) || (isset($advtmThemeCompatibility) && $advtmThemeCompatibility)}</div><div class="clear"></div>{/if}
-<div id="_desktop_top_menu" class="adtm_menu_container {$advtmContainerClasses|escape:'htmlall':'UTF-8'} col-md-12 p-0">
+<div id="_desktop_top_menu" class="adtm_menu_container {$advtmContainerClasses|escape:'htmlall':'UTF-8'} col-md-12">
 	<div id="adtm_menu"{if $advtmActivatedMenuId && $advtmActivatedMenuType} data-activate-menu-id=".{$advtmActivatedMenuId|escape:'htmlall':'UTF-8'}" data-activate-menu-type="{$advtmActivatedMenuType|escape:'htmlall':'UTF-8'}"{/if}{if isset($advtmOpenMethod) && $advtmOpenMethod} data-open-method="{$advtmOpenMethod|intval}"{/if}{if isset($advtmIsSticky) && $advtmIsSticky} data-sticky="1"{/if}{if isset($advtmResponsiveContainerClasses) && !empty($advtmResponsiveContainerClasses)} class="{$advtmResponsiveContainerClasses|escape:'htmlall':'UTF-8'}"{/if}>
 		<div id="adtm_menu_inner"{if isset($advtmInnerClasses) && !empty($advtmInnerClasses)} class="{$advtmInnerClasses|escape:'htmlall':'UTF-8'}"{/if}>
-			<ul id="menu">
+			<ul id="menu"   {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}class="white-menu"{/if}>
 				{if isset($advtmResponsiveMode) && $advtmResponsiveMode}
 				<li class="li-niveau1 advtm_menu_toggle">
 					<a class="a-niveau1 adtm_toggle_menu_button"><span class="advtm_menu_span adtm_toggle_menu_button_text">{if isset($advtmResponsiveToggleText) && !empty($advtmResponsiveToggleText)}{$advtmResponsiveToggleText|escape:'htmlall':'UTF-8'}{else}Menu{/if}</span></a>
@@ -51,7 +51,7 @@
 								{/if}
 							{/if}
 						<table class="columnWrapTable">
-							<tr>
+							<tr class="subsub">
 							{foreach from=$advtm_columns_wrap[$menu.id_menu] item=column_wrap name=loop2}
 								{assign var='columnWrapIsInChosenGroups' value=1}
 								{if $column_wrap.privacy eq 3}

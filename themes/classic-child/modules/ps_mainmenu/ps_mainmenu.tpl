@@ -34,7 +34,7 @@
     {/if}
 {/function}
 
-<div class="menu js-top-menu position-static hidden-sm-down" id="_desktop_top_menu">
+<div class="menu">
     {menu nodes=$menu.children}
 
 </div>

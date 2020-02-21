@@ -28,7 +28,12 @@
         <input type="hidden" name="controller" value="search">
         <input type="text" name="s" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
         <button type="submit">
-            <img src="{$urls.img_url}search.png" id="search-icon" class="icon-top">
+            {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2} <img src="{$urls.img_url}search.png" id="search-icon" class="icon-top">
+            {else}
+                <img src="{$urls.img_url}searchblack.png" id="search-icon" class="icon-top">
+
+
+            {/if}
             <span class="hidden-xl-down">{l s='Search' d='Shop.Theme.Catalog'}</span>
         </button>
     </form>

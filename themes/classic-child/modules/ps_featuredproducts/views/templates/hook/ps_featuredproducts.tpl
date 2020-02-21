@@ -22,6 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+
 <section class="featured-products">
     <h2 class="h2 products-section-title text-uppercase">
         {l s='Notre sélection du moment' d='Shop.Theme.Catalog'}
@@ -36,41 +37,25 @@
     </a>
 </section>
 
-<div class="col-md-12 text-center gift-blockos">
-    <div class="container">
-        <div class="row">
 
+{*<div class="col-md-12 oli-block">
 
-            <h3 class="offer">À offrir ou à s'offrir</h3>
-            <p class="present-text">La compagnie vous partage ses idées originales pour des cadeaux réussis et<br/> vous
-                aide à choisir.</p>
-            <span class="find-present">  <a href="#" id="link-present">Trouvez le cadeau parfait</a>  <span
-                        class="up-orange"></span></span>
-
-        </div>
-    </div>
-</div>
-    <div class="col-md-12 oli-block">
-
-                <div class="col-md-6 bg-green pl-3">
-                    <span class="intro-oli">Chez la Compagnie de Provence</span>
-                    <div class="main-oli">Nous avons à <br/>coeur de<br/> privilégier les <br/> producteurs locaux</div>
-                    <span class="best-compo">Découvrir nos supers ingrédients</span>
-                    <span class="up-brown"></span>
-
-
-                </div>
-                <div class="col-md-6 pic-oli">
-                    <img src="{$urls.img_url}jeromeoliver.png" class="oli-pic">
-                    <span class="legend-oli">Chez Jérôme, producteur d'olivier <strong>.</strong> 06130 Grasse</span>
-                </div>
-
+    <div class="col-md-6 bg-green pl-3">
+        <span class="intro-oli">Chez la Compagnie de Provence</span>
+        <div class="main-oli">Nous avons à <br/>coeur de<br/> privilégier les <br/> producteurs locaux</div>
+        <span class="best-compo">Découvrir nos supers ingrédients</span>
+        <span class="up-brown"></span>
 
 
     </div>
+    <div class="col-md-6 pic-oli">
+        <img src="{$urls.img_url}jeromeoliver.png" class="oli-pic">
+        <span class="legend-oli">Chez Jérôme, producteur d'olivier <strong>.</strong> 06130 Grasse</span>
+    </div>
 
 
-</div>
-</div>
-</div>
+</div>*}
+
+
+
 

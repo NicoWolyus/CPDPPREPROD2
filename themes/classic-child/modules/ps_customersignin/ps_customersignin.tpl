@@ -24,8 +24,11 @@
  *}
 <a href="{$urls.base_url}wishlist/" id="wish-block">
 <div id="wishlist">
-
+    {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
 <img src="{$urls.img_url}wish.png" id="wish-icon" class="icon-top">
+    {else}
+        <img src="{$urls.img_url}wishblack.png" id="wish-icon" class="icon-top">
+    {/if}
 
 </div>
 
@@ -41,7 +44,13 @@
                     href="{$logout_url}"
                     rel="nofollow"
             >
-                <img src="{$urls.img_url}account.png" id="search-icon" class="icon-top">
+
+                {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
+
+                <img src="{$urls.img_url}account.png" class="icon-top">
+                {else}
+                <img src="{$urls.img_url}accountblack.png"  class="icon-top">
+                {/if}
 
             </a>
             <a
@@ -50,8 +59,15 @@
                     title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
                     rel="nofollow"
             >
-                <img src="{$urls.img_url}account.png" id="search-icon" class="icon-top">
-                <span class="hidden-sm-down">{$customerName}</span>
+
+                {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
+
+                <img src="{$urls.img_url}account.png" class="icon-top">
+                {else}
+                <img src="{$urls.img_url}accountblack.png" class="icon-top">
+                {/if}
+
+             {*   <span class="hidden-sm-down">{$customerName}</span>*}
             </a>
         {else}
             <a
@@ -59,8 +75,12 @@
                     title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
                     rel="nofollow"
             >
-                <img src="{$urls.img_url}account.png" id="search-icon" class="icon-top">
+                {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
 
+                <img src="{$urls.img_url}account.png" class="icon-top">
+                {else}
+                <img src="{$urls.img_url}accountblack.png" class="icon-top">
+                {/if}
             </a>
         {/if}
     </div>

@@ -49,19 +49,25 @@
       {/block}
 
 
+
+
       <div class="product-description">
+          <div class="decli-list">
+              <span class="defaultdecli">300ml</span>
+              <span class="autresdecli">+ 20 autres senteurs</span>
+          </div>
 
         {block name='product_name'}
           {if $page.page_name == 'index'}
-            <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}"> <div class="catdef"> {if isset($product.id_category_default)}
-                            {assign var='catname' value=Category::getCategoryInformations(array($product.id_category_default))}
-                            {$catname[$product.id_category_default].name}
-                        {/if}</div>{$product.name|truncate:80:'...'}</a></h3>
-          {else}
-            <h2 class="h3 product-title" itemprop="name"><a href="{$product.url}"> <div class="catdef"> {if isset($product.id_category_default)}
-                            {assign var='catname' value=Category::getCategoryInformations(array($product.id_category_default))}
-                            {$catname[$product.id_category_default].name}
-                        {/if}</div>{$product.name|truncate:80:'...'}</a></h2>
+              <div class="catdef"> {if isset($product.id_category_default)}
+                      {assign var='catname' value=Category::getCategoryInformations(array($product.id_category_default))}
+                      {$catname[$product.id_category_default].name}
+                  {/if}</div><h3 class="h3 product-title" itemprop="name"><a href="{$product.url}"> {$product.name|truncate:80:'...'}</a></h3>
+          {else}<div class="catdef"> {if isset($product.id_category_default)}
+              {assign var='catname' value=Category::getCategoryInformations(array($product.id_category_default))}
+              {$catname[$product.id_category_default].name}
+          {/if}</div>
+            <h2 class="h3 product-title" itemprop="name"><a href="{$product.url}"> {$product.name|truncate:80:'...'}</a></h2>
           {/if}
         {/block}
 
@@ -103,7 +109,7 @@
         {block name='quick_view'}
           <a class="quick-view" href="#" data-link-action="quickview">
               <a href="#" class="quick-wish-block"> <img class="quick-wish" src="{$urls.img_url}wish.png" alt="add to wishlist"></a>
-              <a href="#" class="quick-cart-block"> <img class="quick-cart" src="{$urls.img_url}cart.png" alt="add to cart"></a>
+              <a href="{$product.url}" class="quick-cart-block"> <img class="quick-cart" src="{$urls.img_url}gocart.png" alt="add to cart"></a>
           </a>
         {/block}
 

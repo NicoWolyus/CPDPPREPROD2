@@ -28,7 +28,13 @@
       {if $cart.products_count > 0}
         <a rel="nofollow" href="{$cart_url}">
       {/if}
+
+            {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
+
             <img src="{$urls.img_url}cart.png" id="wish-icon" class="icon-top">
+            {else}
+            <img src="{$urls.img_url}cartblack.png" id="wish-icon" class="icon-top">
+            {/if}
 
         <span class="cart-products-count">{$cart.products_count}</span>
       {if $cart.products_count > 0}

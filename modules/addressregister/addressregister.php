@@ -174,6 +174,11 @@ class AddressRegister extends Module
 
     public function hookActionCustomerAccountAdd(array $params)
     {
+	$context = Context::getContext();
+	if (isset($context->kerawen)) {
+		return false;
+	}
+
         $customer = $params['newCustomer'];
         //file_put_contents(DIRNAME(__FILE__).'/test_log.txt', var_export($customer, true));
         $address_form = $this->makeAddressForm($customer);

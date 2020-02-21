@@ -28,20 +28,20 @@
 {block name='header_banner'}
     <div class="header-banner">
         {hook h='displayNav1'}
-        {hook h='displayBanner'}
+
     </div>
 {/block}
 
 {block name='header_nav'}
     <nav class="header-nav">
-
+    {hook h='displayNavFullWidth'}
     <div class="container p-0">
     <div class="row">
     {block name='header_top'}
         <div class="header-top">
 
             <div class="col-md-3 hidden-sm-down" id="_desktop_logo">
-                {if $page.page_name == 'index' || $page.page_name =='category'}
+                {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
                     <h1>
                         <a href="{$urls.base_url}">
                             <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
@@ -97,7 +97,7 @@
 
 
     </div>
-    {hook h='displayNavFullWidth'}
+
 {/block}
 
 

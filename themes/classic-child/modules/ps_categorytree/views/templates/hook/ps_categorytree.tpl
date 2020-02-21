@@ -58,6 +58,7 @@
             {/if}
           </li>
         {/foreach}
+        <li class="custom-filters"><img src="{$urls.img_url}filter.png" alt="filters" class="filterscat">+ de filtres</li>
       </ul>
     {/if}
   {/strip}

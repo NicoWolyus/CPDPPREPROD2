@@ -26,7 +26,7 @@
     <div class="buttons_bottom_block no-print panel-product-line panel-product-actions">
     	<div id="wishlist_button">
     		<button class="wishlist_button_extra" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value, $('#idWishlist').val()); return false;"  title="{l s='Add to wishlist' mod='blockwishlist'}">
-    			<i class="fa fa-heart" style="font-weight:400;"></i>
+
                 {l s='Ajouter à la liste de souhait' mod='blockwishlist'}
     		</button>
             <select id="idWishlist">
@@ -38,9 +38,9 @@
     </div>
 {else}
     <p class="panel-product-line panel-product-actions">
-    	<a id="wishlist_button" href="#" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow"  title="{l s='Add to my wishlist' mod='blockwishlist'}">
-    		<i class="fa fa-heart" style="font-weight:400;"></i>
-            {l s='Ajouter à la liste de souhait' mod='blockwishlist'}
+    	<a id="wishlist_button" href="#" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow"  class="quick-wish-block" title="{l s='Add to my wishlist' mod='blockwishlist'}">
+
+			<img class="quick-wish" src="{$urls.img_url}wish.png" alt="add to wishlist">
     	</a>
     </p>
 {/if}

@@ -91,14 +91,14 @@ function endlessScroll(pageno, trigger_event, scroll) {
     if (display_end_message == 1) {
         endlessscrollias.extension(new IASNoneLeftExtension({
             text: end_page_message,
-            html: '<div class="ias-noneleft message-box" style="text-align: center;background-color:' + background_color + ';color:' + text_color + ';border-color:' + border_color + '">{text}</div>'
+            html: '<div class="ias-noneleft message-box" style="text-align: center;">{text}</div>'
         }));
     }
     if (trigger_event) {
         if (scroll_type == 1) {
             endlessscrollias.extension(new IASTriggerExtension({
                 text: load_more_link_page,
-                html: '<div  class="ias-trigger ias-trigger-next vss-more-products" style="display: block;"><div class="inner-text">{text}</div><div class="vss-down-icon"></div></div>',
+                html: '<div  class="ias-trigger ias-trigger-next vss-more-products" style="display: block;"><img class="cross-more" src="/themes/classic-child/assets/img/crosswhite.png"><div class="inner-text">{text}</div></div>',
                 offset: load_more_link_frequency,
             }));
         }

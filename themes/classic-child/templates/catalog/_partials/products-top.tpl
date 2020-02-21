@@ -22,6 +22,9 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+
+
+{*
 <div id="js-product-list-top" class="row products-selection">
   <div class="col-md-6 hidden-sm-down total-products">
     {if $listing.pagination.total_items > 1}
@@ -54,3 +57,5 @@
     ]}
   </div>
 </div>
+*}
+
