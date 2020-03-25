@@ -22,21 +22,63 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-
+<div class="clearfix"></div>
 <section class="featured-products">
     <h2 class="h2 products-section-title text-uppercase">
         {l s='Notre sélection du moment' d='Shop.Theme.Catalog'}
     </h2>
-    <div class="products">
-        {foreach from=$products item="product"}
-            {include file="catalog/_partials/miniatures/product.tpl" product=$product}
-        {/foreach}
-    </div>
-    {* <a class="all-product-link float-xs-left float-md-right h4" href="{$allProductsLink}">
-       {l s='All products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>*}
-    </a>
-</section>
 
+    <div class="products swiper-container" id="mobilefeat">
+        <div class="swiper-wrapper" id="homefeatu">
+            {foreach from=$products item="product"}
+                {include file="catalog/_partials/miniatures/product2.tpl" product=$product}
+            {/foreach}
+
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination" id="homepagi"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev" id="homeleft"></div>
+        <div class="swiper-button-next" id="homeright"></div>
+
+
+    </div>
+    <div class="products" id="desktopfeat">
+
+            {foreach from=$products item="product"}
+                {include file="catalog/_partials/miniatures/product.tpl" product=$product}
+            {/foreach}
+
+
+          </div>
+
+
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        })
+    </script>
+
+</section>
+<div class="clearfix"></div>
 
 {*<div class="col-md-12 oli-block">
 
@@ -55,6 +97,7 @@
 
 
 </div>*}
+
 
 
 

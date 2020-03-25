@@ -1,0 +1,256 @@
+/*
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file.
+ * You are not authorized to modify, copy or redistribute this file.
+ * Permissions are reserved by FME Modules.
+ *
+ *  @author    FMM Modules
+ *  @copyright FME Modules 2020
+ *  @license   Single domain
+ */
+/***********************************************************
+					Stores Page Styles
+************************************************************/
+#stores .store_map {
+  width: 100%;
+  min-height: 500px !important;
+  margin-bottom: 26px;
+}
+#stores input#addressInput {
+  display: inline-block;
+  width: 100%;
+  /*width: 269px;*/
+}
+#stores .address-input {
+  float: left;
+  margin-right: 19px;
+}
+a.store_direction {
+  padding: 5px;
+  border: 1px solid;
+  float: left;
+}
+a.store_selection {
+  border: 1px solid #e4e4e4;
+  padding: 5px;
+  float: right;
+  margin: 0 5px 0px 0px;
+  background: #2fb5d2;
+  color: #fff;
+  text-decoration: none;
+}
+a.store_selection:hover {
+  background: rgb(48, 169, 37);
+  border: 1px solid rgb(48, 169, 37);;
+  color: #fff!important;
+}
+#storelocatore-cal-wrapper {
+  border-bottom: 1px dashed #d4d4d4;
+}
+.storelocator_calander_heading {
+  border-top: 2px solid #555;
+  padding: 6px;
+  font-size: 18px;
+  background: #F6F6F6;
+  color: #444;
+}
+
+.flatpickr-input {
+  font-weight: bold;
+  color: #1e9f0b;
+}
+/* calander */
+.available-date {
+  background-color: #F0F0F0;
+}
+.disabled-date {
+  background-color: #FF9B08;
+  cursor: not-allowed;
+}
+.disabled-date:hover {
+  opacity: 0.5;
+}
+td.dow-clickable :hover {
+  background: #2FB5D2!important;;
+  color: #fff;
+}
+td.dow-clickable.selected, td.dow-clickable.selected .available-date {
+  background: #2FB5D2!important;
+  color: #fff;
+}
+#storelocator_pickup_date::placeholder, #storelocator_pickup_time::placeholder {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+/* END - calander */
+@media (max-width: 767px) {
+  #stores .address-input {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+#stores .address-input label {
+  margin-right: 5px;
+}
+#stores .radius-input {
+  float: left;
+  line-height: 23px;
+  margin-right: 20px;
+}
+#stores .radius-input label,
+#stores .radius-input .selector {
+  float: left;
+}
+#stores .radius-input label {
+  margin-right: 10px;
+}
+#stores .radius-input #radiusSelect {
+  width: 78px;
+}
+#stores .store-content {
+  padding-bottom: 30px;
+}
+#stores .store-content-select .selector {
+  visibility: hidden;
+  display: none;
+}
+#stores .store-content-select.active {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #d6d4d4;
+}
+#stores .store-content-select.active .selector {
+  visibility: visible;
+  display: block;
+}
+#stores .store-title {
+  margin-bottom: 16px;
+}
+#stores label {
+  font-weight: normal;
+  color: #777;
+}
+#stores #stores_loader {
+  display: none;
+  margin-left: 5px;
+}
+#stores #locationSelect {
+  max-width: 356px;
+  visibility: hidden;
+}
+#stores #stores-table {
+  display: none;
+}
+#stores #stores-table tbody td {
+  padding: 20px;
+}
+#stores #stores-table tbody td.num {
+  background: #fbfbfb;
+  width: 46px;
+}
+#stores #stores-table tbody td.name span {
+  padding-left: 15px;
+}
+@media (max-width: 767px) {
+  #stores #stores-table tbody td.name img {
+    display: none;
+  }
+}
+
+.store-image img {
+  width: 100%;
+  min-width: 100px;
+}
+
+/*# sourceMappingURL=stores.css.map */
+/*~~~~~~~~~ PS 1.7 Stylings ~~~~~~~~~*/
+#fmeStorePage {
+  width: 100%;
+  padding-bottom: 10px;
+}
+#fmeStorePage p {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3%;
+}
+#fmeStorePage p label,
+#fmeStorePage p select {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+}
+.clear_me {
+  width: 100%;
+  clear: both;
+}
+#fmeStorePage p label {
+  padding-right: 3px;
+}
+
+#fmeStorePage p.clearfix {
+  margin-right: 0px;
+  text-align: right;
+  width: 100%;
+}
+
+#fmeStorePage p .form-control {
+  display: inline-block;
+  width: auto;
+}
+
+/*------- New Split Theme Styles --------*/
+#fmmsl_split_list {
+  width: 100%;
+  max-height: 505px;
+  overflow-y: scroll;
+}
+#fmmsl_split_list ul {
+  padding: 0;
+  margin: 0;
+}
+#fmmsl_split_list ul li {
+  list-style: none;
+  padding: 4% 1%;
+  margin: 0;
+  display: block;
+  clear: both;
+  color: #555555;
+  border-bottom: 1px solid #cccccc;
+}
+#fmmsl_split_list ul li a {
+  display: block;
+  clear: both;
+}
+#fmmsl_split_list ul p {
+  margin: 0;
+  padding: 5px 0;
+}
+.fmmsl_storeview {
+  display: inline-block !important;
+  font-size: 12px;
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+  #stores #stores-table tbody td {
+    padding: 3px;
+  }
+}
+@media (min-width: 200px) and (max-width: 410px) {
+  #stores #stores-table {
+    font-size: 11px;
+  }
+  #stores #stores-table tbody td {
+    width: auto !important;
+    vertical-align: middle;
+  }
+  #stores #stores-table tbody tr td:first-child,
+  #stores #stores-table tbody tr td:last-child {
+    text-align: center;
+  }
+  #stores #stores-table th {
+    padding: 3px !important;
+  }
+}

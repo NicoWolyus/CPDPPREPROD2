@@ -209,7 +209,7 @@ class CustomerFormatterCore implements FormFormatterInterface
                 ->addAvailableValue(
                     'comment',
                     $this->translator->trans('(E.g.: %date_format%)', array('%date_format%' => Tools::formatDateStr('31 May 1970')), 'Shop.Forms.Help')
-                );
+                )->setRequired(true);;
         }
 
         if ($this->ask_for_partner_optin) {

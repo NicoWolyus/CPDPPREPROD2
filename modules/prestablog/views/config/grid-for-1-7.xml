@@ -2,12 +2,12 @@
 <theme>
 	<images>
                 <thumb> <!--Image prevue pour les miniatures dans les listes -->
-                    <width>270</width>
-                    <height>330</height>
+                    <width>350</width>
+                    <height>200</height>
                 </thumb>
                 <slide> <!--Image prevue pour les slides -->
-                    <width>269</width>
-                    <height>330</height>
+                    <width>555</width>
+                    <height>246</height>
                 </slide></images>
 	<categories>
                 <thumb> <!--Image prevue pour les miniatures dans les listes -->

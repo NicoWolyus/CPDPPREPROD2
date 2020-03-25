@@ -98,7 +98,7 @@ function endlessScroll(pageno, trigger_event, scroll) {
         if (scroll_type == 1) {
             endlessscrollias.extension(new IASTriggerExtension({
                 text: load_more_link_page,
-                html: '<div  class="ias-trigger ias-trigger-next vss-more-products" style="display: block;"><img class="cross-more" src="/themes/classic-child/assets/img/crosswhite.png"><div class="inner-text">{text}</div></div>',
+                html: '<div class="suite">Par ici la suite</div><div  class="ias-trigger ias-trigger-next vss-more-products" style="display: block;"><img class="cross-more" src="/themes/classic-child/assets/img/crosswhite.png"><div class="inner-text">{text}</div></div>',
                 offset: load_more_link_frequency,
             }));
         }

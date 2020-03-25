@@ -24,16 +24,23 @@
  *}
 <div class="product-line-grid">
   <!--  product left content: image-->
-  <div class="product-line-grid-left col-md-3 col-xs-4">
+  <div class="product-line-grid-left col-md-2 col-xs-4">
     <span class="product-image media-middle">
       <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}">
     </span>
   </div>
 
   <!--  product left body: description -->
-  <div class="product-line-grid-body col-md-4 col-xs-8">
+  <div class="product-line-grid-body col-md-5 col-xs-8">
     <div class="product-line-info">
       <a class="label" href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
+        {if $product.features }
+            {foreach from=$product.features item=feature name=features}
+                {if $feature.name == "Senteur"}
+                    <span class="senteur-panier">{$feature.value|escape:'html':'UTF-8'}<br/></span>
+                {/if}
+            {/foreach}
+        {/if}
     </div>
 
     <div class="product-line-info product-price h5 {if $product.has_discount}has-discount{/if}">
@@ -51,11 +58,23 @@
           {/if}
         </div>
       {/if}
-      <div class="current-price">
+    {*  <div class="current-price">
         <span class="price">{$product.price}</span>
         {if $product.unit_price_full}
           <div class="unit-price-cart">{$product.unit_price_full}</div>
         {/if}
+      </div>*}
+
+      <div class="col-md-6 col-xs-2 price">
+            <span class="product-price">
+              <strong>
+                {if isset($product.is_gift) && $product.is_gift}
+                  <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
+                {else}
+                  {$product.total}
+                {/if}
+              </strong>
+            </span>
       </div>
     </div>
 
@@ -113,10 +132,10 @@
   <!--  product left body: description -->
   <div class="product-line-grid-right product-line-actions col-md-5 col-xs-12">
     <div class="row">
-      <div class="col-xs-4 hidden-md-up"></div>
-      <div class="col-md-10 col-xs-6">
+
+      <div class="col-md-7 col-xs-6">
         <div class="row">
-          <div class="col-md-6 col-xs-6 qty">
+          <div class="qty">
             {if isset($product.is_gift) && $product.is_gift}
               <span class="gift-quantity">{$product.quantity}</span>
             {else}
@@ -133,21 +152,11 @@
               />
             {/if}
           </div>
-          <div class="col-md-6 col-xs-2 price">
-            <span class="product-price">
-              <strong>
-                {if isset($product.is_gift) && $product.is_gift}
-                  <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
-                {else}
-                  {$product.total}
-                {/if}
-              </strong>
-            </span>
-          </div>
+
         </div>
       </div>
-      <div class="col-md-2 col-xs-2 text-xs-right">
-        <div class="cart-line-product-actions">
+
+        <div class="cart-line-product-actions col-md-4">
           <a
               class                       = "remove-from-cart"
               rel                         = "nofollow"
@@ -158,7 +167,7 @@
               data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
           >
             {if !isset($product.is_gift) || !$product.is_gift}
-            <i class="material-icons float-xs-left">delete</i>
+            <i class="material-icons delete-cart"></i>
             {/if}
           </a>
 
@@ -168,7 +177,7 @@
 
         </div>
       </div>
-    </div>
+
   </div>
 
   <div class="clearfix"></div>

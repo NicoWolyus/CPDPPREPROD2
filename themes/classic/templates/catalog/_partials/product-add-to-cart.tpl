@@ -58,7 +58,7 @@
       </div>
     {/block}
 
-    {block name='product_availability'}
+   {* {block name='product_availability'}
       <span id="product-availability">
         {if $product.show_availability && $product.availability_message}
           {if $product.availability == 'available'}
@@ -72,7 +72,7 @@
         {/if}
       </span>
     {/block}
-
+*}
     {block name='product_minimal_quantity'}
       <p class="product-minimal-quantity">
         {if $product.minimal_quantity > 1}

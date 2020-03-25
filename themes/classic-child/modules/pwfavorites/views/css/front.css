@@ -1,0 +1,127 @@
+.pw-fav-link {
+  margin-left: .9375rem;
+  margin-top: .9375rem;
+}
+
+.pw-fav-toggle, .pw-fav-toggle:hover, .pw-fav-toggle:focus {
+  text-decoration: none;
+  z-index: 1;
+}
+
+.pw-fav-toggle i {
+  font-size: 1.8rem;
+}
+
+.pw-fav-toggle .pw-fav-remove {
+  display: none;
+}
+
+.pw-fav-toggle.active .pw-fav-add {
+  display: none;
+}
+
+.pw-fav-toggle.active .pw-fav-remove {
+  display: inline-block;
+}
+
+.pw-fav-slider .thumbnail-container {
+  margin: 0 auto;
+}
+
+.pw-fav-alerts {
+  padding-top: 25px;
+  position: fixed;
+  right: 25px;
+  top: 150px;
+  width: 250px;
+  z-index: 1000;
+}
+
+.pw-fav-alert {
+  background-color: #CC0000;
+  color: #FFFFFF;
+  font-size: 0.8em;
+  line-height: 15px;
+  margin-bottom: 10px;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.pw-fav-alert-close {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1.5em;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pw-fav-alert a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.pw-fav-alert-progress {
+  background-color: #FF6666;
+  bottom: 0;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.pw-fav-alert-progress-value {
+  background-color: #660000;
+  height: 100%;
+  transition: width 10s linear;
+  width: 0;
+}
+
+.pw-fav-alert-progress-value.translate {
+  width: 100%;
+}
+
+.pw-fav-cart-footer {
+  margin-top: 25px;
+}
+
+.pw-fav-cart-footer > h2 {
+  margin-bottom: 25px;
+}
+
+.pw-fav-cart-footer .bx-wrapper .bx-controls-direction a {
+  top: calc(50%);
+}
+
+.product-additional-info > .pw-fav-toggle {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.pw-fav-cart-footer .bx-wrapper .bx-controls-direction a {
+  top: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+}
+
+.pw-fav-cart-footer .bx-wrapper .bx-controls-direction a i.material-icons {
+  font-size: 3.125rem;
+  color: #fff;
+  vertical-align: middle;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.pw-fav-cart-footer .bx-wrapper .bx-controls-direction a i.material-icons:hover {
+  color: #2fb5d2;
+}
+
+.pw-fav-cart-footer .bx-wrapper .bx-controls-direction a:before {
+  content: '';
+  padding-left: 0;
+  font-size: inherit;
+  line-height: inherit;
+}

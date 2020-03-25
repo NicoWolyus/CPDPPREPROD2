@@ -73,12 +73,12 @@
         {/if}
 
         <p class="add-address">
-          <a href="{$new_address_delivery_url}"><i class="material-icons">&#xE145;</i>{l s='add new address' d='Shop.Theme.Actions'}</a>
-        </p>
+          <a href="{$new_address_delivery_url}">{l s='add new address' d='Shop.Theme.Actions'}</a>
+       </p> <div class="up-brown"></div>
 
         {if $use_same_address && !$cart.is_virtual}
           <p>
-            <a data-link-action="different-invoice-address" href="{$use_different_address_url}">
+            <a data-link-action="different-invoice-address" href="{$use_different_address_url}" id="different-adresse">
               {l s='Billing address differs from shipping address' d='Shop.Theme.Checkout'}
             </a>
           </p>

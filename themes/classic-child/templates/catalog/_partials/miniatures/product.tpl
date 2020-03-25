@@ -22,103 +22,166 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+
+
 {block name='product_miniature_item'}
-  <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
-    <div class="thumbnail-container"> <!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
-        {block name='product_flags'}
-            <ul class="product-flags">
-                {foreach from=$product.flags item=flag}
-                    <li class="product-flag {$flag.type}">{$flag.label}</li>
-                {/foreach}
-            </ul>
-        {/block}
-      {block name='product_thumbnail'}
-        {if $product.cover}
-          <a href="{$product.url}" class="thumbnail product-thumbnail">
-            <img
-              src="{$product.cover.bySize.home_default.url}"
-              alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
-              data-full-size-image-url="{$product.cover.large.url}"
-            />
-          </a>
-        {else}
-          <a href="{$product.url}" class="thumbnail product-thumbnail">
-            <img src="{$urls.no_picture_image.bySize.home_default.url}" />
-          </a>
-        {/if}
-      {/block}
-
-
-
-
-      <div class="product-description">
-          <div class="decli-list">
-              <span class="defaultdecli">300ml</span>
-              <span class="autresdecli">+ 20 autres senteurs</span>
-          </div>
-
-        {block name='product_name'}
-          {if $page.page_name == 'index'}
-              <div class="catdef"> {if isset($product.id_category_default)}
-                      {assign var='catname' value=Category::getCategoryInformations(array($product.id_category_default))}
-                      {$catname[$product.id_category_default].name}
-                  {/if}</div><h3 class="h3 product-title" itemprop="name"><a href="{$product.url}"> {$product.name|truncate:80:'...'}</a></h3>
-          {else}<div class="catdef"> {if isset($product.id_category_default)}
-              {assign var='catname' value=Category::getCategoryInformations(array($product.id_category_default))}
-              {$catname[$product.id_category_default].name}
-          {/if}</div>
-            <h2 class="h3 product-title" itemprop="name"><a href="{$product.url}"> {$product.name|truncate:80:'...'}</a></h2>
-          {/if}
-        {/block}
-
-        {block name='product_price_and_shipping'}
-          {if $product.show_price}
-            <div class="product-price-and-shipping">
-
-
-              {hook h='displayProductPriceBlock' product=$product type="before_price"}
-
-              <span class="sr-only">{l s='Price' d='Shop.Theme.Catalog'}</span>
-              <span itemprop="price" class="price">{$product.price}</span>
-                {if $product.has_discount}
-                    {hook h='displayProductPriceBlock' product=$product type="old_price"}
-
-                    <span class="sr-only">{l s='Regular price' d='Shop.Theme.Catalog'}</span>
-                    <span class="regular-price">{$product.regular_price}</span>
-                    {if $product.discount_type === 'percentage'}
-                        <span class="discount-percentage discount-product">{$product.discount_percentage}</span>
-                    {elseif $product.discount_type === 'amount'}
-                        <span class="discount-amount discount-product">{$product.discount_amount_to_display}</span>
-                    {/if}
-                {/if}
-              {hook h='displayProductPriceBlock' product=$product type='unit_price'}
-
-              {hook h='displayProductPriceBlock' product=$product type='weight'}
+    <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}"
+             data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+        <div class="thumbnail-container"> {if $product.dwf_originredient}
+            <div class="box-origine-list">
+                <div class="origin-number">{$product.dwf_originredient}%</div>
+                <div class="origin-text">{l s='d\'ingrédients' d='Shop.Theme.Special'}</div>
+                <div class="origin-text origin-text2">{l s='d\'origine' d='Shop.Theme.Special'}</div>
+                <div class="origin-text origin-text3">{l s='naturelle' d='Shop.Theme.Special'}</div>
             </div>
-          {/if}
-        {/block}
+            {/if}<!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
+            {if $product.dwf_nouveau}
+                <div class="newlist">Nouveau</div>
+            {/if} {block name='product_flags'}
+                <ul class="product-flags">
+                    {foreach from=$product.flags item=flag}
+                        <li class="product-flag {$flag.type}">{$flag.label}</li>
+                    {/foreach}
+                </ul>
+            {/block}
+            {block name='product_thumbnail'}
+                {if $product.cover}
+                    <a href="{$product.url}" class="thumbnail product-thumbnail">
+                        <img
+                                src="{$product.cover.bySize.home_default.url}"
+                                alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
+                                data-full-size-image-url="{$product.cover.large.url}"
+                        />
+                    </a>
+                {else}
+                    <a href="{$product.url}" class="thumbnail product-thumbnail">
+                        <img src="{$urls.no_picture_image.bySize.home_default.url}"/>
+                    </a>
+                {/if}
+            {/block}
 
-        {block name='product_reviews'}
-          {hook h='displayProductListReviews' product=$product}
-        {/block}
-      </div>
+
+            <div class="product-description">
+                <div class="decli-list">
+                    {if $product.features }
+
+                       {foreach from=$product.features item=feature name=features}
+                          {if $feature.name == "Format"}
+
+                    <span class="defaultdecli">
 
 
 
-      <div class="highlighted-informations{if !$product.main_variants} no-variants{/if} hidden-sm-down">
-        {block name='quick_view'}
-          <a class="quick-view" href="#" data-link-action="quickview">
-              <a href="#" class="quick-wish-block"> <img class="quick-wish" src="{$urls.img_url}wish.png" alt="add to wishlist"></a>
-              <a href="{$product.url}" class="quick-cart-block"> <img class="quick-cart" src="{$urls.img_url}gocart.png" alt="add to cart"></a>
-          </a>
-        {/block}
+                                  {if $product.dwf_imgformat}<img
+                                      src="{$product.dwf_imgformat}" />
+                                  {/if}<span class="featlist"> {$feature.value|escape:'html':'UTF-8'}</span></span>
+                          {/if}
 
-        {block name='product_variants'}
-          {if $product.main_variants}
-            {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
-          {/if}
-        {/block}
-      </div>
-    </div>
-  </article>
+                       {/foreach}
+                    {/if}
+
+                    <span class="autresdecli"> {if $product.dwf_senteursnumber}+ {$product.dwf_senteursnumber} autres senteurs{/if}</span>
+
+                </div>
+
+                {block name='product_name'}
+                    {if $page.page_name == 'index'}
+                        <h3 class="h3 product-title" itemprop="name"><a
+                                    href="{$product.url}"> {$product.name|truncate:80:'...'}</a></h3>
+                        {if $product.features }
+                            {foreach from=$product.features item=feature name=features}
+                                {if $feature.name == "Senteur"}
+                                    <div class="catdef">{$feature.value|escape:'html':'UTF-8'}<br/></div>
+                                {/if}
+                            {/foreach}
+                        {/if}
+                    {else}
+                        <h2 class="h3 product-title" itemprop="name"><a
+                                    href="{$product.url}"> {$product.name|truncate:80:'...'}</a></h2>
+                        {if $product.features }
+                            {foreach from=$product.features item=feature name=features}
+                                {if $feature.name == "Senteur"}
+                                    <div class="catdef">{$feature.value|escape:'html':'UTF-8'}<br/></div>
+                                {/if}
+                            {/foreach}
+                        {/if}
+                    {/if}
+                {/block}
+
+                {block name='product_price_and_shipping'}
+                    {if $product.show_price}
+                        <div class="product-price-and-shipping">
+
+
+                            {hook h='displayProductPriceBlock' product=$product type="before_price"}
+
+                            <span class="sr-only">{l s='Price' d='Shop.Theme.Catalog'}</span>
+                            <span itemprop="price" class="price {if $product.discount_type === 'percentage' || $product.discount_type === 'amount'}greenprice{/if} ">{$product.price}</span>
+                            {if $product.has_discount}
+                                {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                                <span class="sr-only">{l s='Regular price' d='Shop.Theme.Catalog'}</span>
+                                <span class="regular-price">{$product.regular_price}</span>
+                                {if $product.discount_type === 'percentage'}
+                                    <span class="discount-percentage discount-product">{$product.discount_percentage}</span>
+                                {elseif $product.discount_type === 'amount'}
+                                    <span class="discount-amount discount-product">{$product.discount_amount_to_display}</span>
+                                {/if}
+                            {/if}
+                            {hook h='displayProductPriceBlock' product=$product type='unit_price'}
+
+                            {hook h='displayProductPriceBlock' product=$product type='weight'}
+                        </div>
+                    {/if}
+                {/block}
+
+                {block name='product_reviews'}
+                    {hook h='displayProductListReviews' product=$product}
+                {/block}
+            </div>
+
+
+            <div class="highlighted-informations{if !$product.main_variants} no-variants{/if} hidden-sm-down">
+                {block name='quick_view'}
+                    {if $product.availability != 'available'}<div class="victimlist">{l s='Victime de son succès' d='Shop.Theme.Special'}</div>{/if}
+                    <a href="{if $customer.is_logged}#{else}{$urls.pages.authentication}{/if}"
+                       class="pw-fav-toggle{if $favorite} active{/if}"
+                       data-id-product="{$product.id_product}"
+                       data-product-name="{$product.product_name}" {if $product.availability != 'available'}id="wishalone"{/if}
+                    >
+  <span class="pw-fav-add">
+
+      <img class="quick-wish" src="{$urls.img_url}wish.png"
+  </span>
+
+                        <script>
+                            if (typeof prestashop.pwFavorites !== 'undefined' && 'handleButtons' in prestashop.pwFavorites) {
+                                prestashop.pwFavorites.handleButtons();
+                            }
+                        </script>
+                    </a>
+
+
+
+
+                    {if $product.availability == 'available'}
+                    <a href="{$product.url}" class="quick-cart-block"> <img class="quick-cart"
+                                                                                src="{$urls.img_url}gocart.png"
+                                                                                alt="add to cart"></a>
+                 {/if}
+                {/block}
+
+                {block name='product_variants'}
+                    {if $product.main_variants}
+                        {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
+                    {/if}
+                {/block}
+            </div>
+        </div>
+    </article>
 {/block}
+
+<script>
+    if (typeof prestashop.pwFavorites !== 'undefined' && 'handleButtons' in prestashop.pwFavorites) {
+        prestashop.pwFavorites.handleButtons();
+    }
+</script>

@@ -25,6 +25,7 @@
 {extends file='page.tpl'}
 
 {block name='page_content_container'}
+
     <section id="content" class="page-home col-md-12 p-0">
         {block name='page_content_top'}{/block}
 
@@ -32,8 +33,67 @@
             {block name='hook_home'}
                 {$HOOK_HOME nofilter}
 
+
             {/block}
         {/block}
+
+
+
+
+
+    </section>
+
+
     </section>
 {/block}
 
+
+
+<div class="products swiper-container" id="mobilefeat">
+    <div class="swiper-wrapper" id="homefeatu">
+        {foreach from=$products item="product"}
+            {include file="catalog/_partials/miniatures/product2.tpl" product=$product}
+        {/foreach}
+
+
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination" id="homepagi"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev" id="homeleft"></div>
+    <div class="swiper-button-next" id="homeright"></div>
+
+
+</div>
+<div class="products" id="desktopfeat">
+
+    {foreach from=$products item="product"}
+        {include file="catalog/_partials/miniatures/product.tpl" product=$product}
+    {/foreach}
+
+
+</div>
+
+
+
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+
+    })
+</script>

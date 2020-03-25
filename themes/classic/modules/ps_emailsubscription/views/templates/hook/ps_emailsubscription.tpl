@@ -24,25 +24,25 @@
 *}
 
 <div class="email_subscription col-md-6" id="blockEmailSubscription_{$hookName}">
-  <h4>Comme nous, exigez le<br/> meilleur !</h4>
+  <h4>{l s='Newsletter' d='Shop.Theme.Special'}</h4>
   <span class="notice-subnews">
-    Inscrivez-vous pour recevoir nos offres du moment, nos conseils,<br/> nos actualités … La compagnie de Provence vous offre 10% sur</br> votre première commande
-  </span>
-
-  {if $msg}
-    <p class="notification {if $nw_error}notification-error{else}notification-success{/if}">{$msg}</p>
-  {/if}
+   {l s='Inscrivez-vous à notre newsletter pour recevoir nos offres du moment, nos conseils, nos actualités… La Compagnie de Provence vous offre 15% sur votre première commande.' d='Shop.Theme.Special'}
+   {if $msg}
+     <p class="notification {if $nw_error}notification-error{else}notification-success{/if}">{$msg}</p>
+   {/if}
   <input type="button" id="newsletter"  value="C'est parti" onClick="open('https://qa.adelya.com/Adelyaview/newslettercdp/signup/Newsletter.html?lang={$language.iso_code}&goto=confirm','other','top=100,left=700,width=480,height=800,status=no,scrollbars=yes').focus();" />
-<div class="up-be"></div>
+<div class="up-be"></div> </span>
+
+
 </div>
 
-<div class="col-md-6 ask-us">
-  <h4>Besoin d’un conseil, ou<br/> simplement une question ?</h4>
+<div class="col-md-6 col-xs-12 ask-us">
+  <h4>{l s='Besoin d’un conseil ?' d='Shop.Theme.Special'}</h4>
   <span class="we-help">
-Chez Compagnie de Provence nous pensons qu’il est important<br/> d’être là quand vous en avez besoin, notre équipe située à Aix en<br/> Provence est là pour vous aider. Contactez-nous par mail, téléphone<br/> ou chat messenger.
+{l s='Chez Compagnie de Provence nous pensons qu’il est important' d='Shop.Theme.Special'}<br/> {l s='d’être là quand vous en avez besoin, notre équipe située à Aix en' d='Shop.Theme.Special'}<br/>  {l s='Provence est là pour vous aider. Contactez-nous par mail, téléphone' d='Shop.Theme.Special'}<br/>{l s='ou chat messenger.' d='Shop.Theme.Special'}
 
   </span>
-<a href="#">Contactez-nous !</a>
+<a href="{$urls.pages.contact}">Contactez-nous !</a>
   <div class="up-beg"></div>
 
 </div>

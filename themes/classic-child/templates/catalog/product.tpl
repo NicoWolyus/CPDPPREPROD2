@@ -49,12 +49,43 @@
 
 {block name='content'}
     <section id="main" itemscope itemtype="https://schema.org/Product">
+
+        {block name='product_images'}
+            <div class="thumlistproduct js-qv-mask mask">
+                <ul class="product-images js-qv-product-images">
+                    {foreach from=$product.images item=image}
+                        <li class="thumb-container">
+                            <img
+                                    class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if}"
+                                    data-image-medium-src="{$image.bySize.medium_default.url}"
+                                    data-image-large-src="{$image.bySize.large_default.url}"
+                                    src="{$image.bySize.home_default.url}"
+                                    alt="{$image.legend}"
+                                    title="{$image.legend}"
+                                    width="100"
+                                    itemprop="image"
+                            >
+                        </li>
+                    {/foreach}
+                </ul>
+            </div>
+        {/block}
         <meta itemprop="url" content="{$product.url}">
 
         <div class="row">
-            <div class="col-md-6">
+
+            <div class="col-md-6 col-xs-12">
                 {block name='page_content_container'}
-                    <section class="page-content" id="content">
+                    <section class="page-content" id="content"> {if $product.dwf_originredient}
+                            <div class="box-origine-list">
+                            <div class="origin-number">{$product.dwf_originredient}%</div>
+                            <div class="origin-text">{l s='d\'ingrédients' d='Shop.Theme.Special'}</div>
+                            <div class="origin-text origin-text2">{l s='d\'origine' d='Shop.Theme.Special'}</div>
+                            <div class="origin-text origin-text3">{l s='naturelle' d='Shop.Theme.Special'}</div>
+                            </div>{/if}
+                        {if $product.dwf_nouveau}
+                            <div class="new">Nouveau</div>
+                        {/if}
                         {block name='page_content'}
                             <!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
                             {block name='product_flags'}
@@ -69,17 +100,29 @@
                                 {include file='catalog/_partials/product-cover-thumbnails.tpl'}
                             {/block}
                             <div class="scroll-box-arrows">
-                                <i class="material-icons left">&#xE314;</i>
-                                <i class="material-icons right">&#xE315;</i>
+                                <i class="material-icons left"><img src="{$urls.img_url}scrollthumb.png"></i>
+                                <i class="material-icons right"><img src="{$urls.img_url}scrollthumb.png"></i>
                             </div>
                         {/block}
+                        {if $product.dwf_miniphrase}
+                            <div class="miniphrase"> {$product.dwf_miniphrase nofilter}</div>{/if}
                     </section>
                 {/block}
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-xs-12" id="blocksoumobile">
                 {block name='page_header_container'}
                     {block name='page_header'}
-                        <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+                        <h1 class="h1"
+                            itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>{if $product.dwf_bestsell}
+                        <span class="bestselproduct">Best-seller</span>
+                    {/if}
+                        {if $product.features }
+                            {foreach from=$product.features item=feature name=features}
+                                {if $feature.name == "Senteur"}
+                                    <span class="defaultdecli">{$feature.value|escape:'html':'UTF-8'}<br/></span>
+                                {/if}
+                            {/foreach}
+                        {/if}
                     {/block}
                 {/block}
                 {block name='product_prices'}
@@ -129,11 +172,10 @@
 
                                 {block name='product_add_to_cart'}
                                     {include file='catalog/_partials/product-add-to-cart.tpl'}
+
                                 {/block}
 
-                                {block name='product_additional_info'}
-                                    {include file='catalog/_partials/product-additional-info.tpl'}
-                                {/block}
+
 
                                 {* Input to refresh product HTML removed, block kept for compatibility with themes *}
                                 {block name='product_refresh'}{/block}
@@ -149,119 +191,248 @@
             </div>
         </div>
     </section>
-</div></div></section>
-
-
-    <div class="row">
+    </div></div></section>
+    <div class="row sousprod">
         <div class="col-md-12">
-
+<div class="container descriall">
             {block name='product_tabs'}
-            <div class="tabs">
-                {if $product.dwf_biod}<img src="{$product.dwf_biod}" class="top-description-img" />{/if}
-              <ul class="nav nav-tabs" role="tablist">
-               {if $product.description}
-                    <li class="nav-item">
-                       <a
-                         class="nav-link{if $product.description} active{/if}"
-                         data-toggle="tab"
-                         href="#description"
-                         role="tab"
-                         aria-controls="description"
-                         {if $product.description} aria-selected="true"{/if}>{l s='En quelques mots' d='Shop.Theme.Catalog'}</a>
-                    </li>
-                  {/if}
-              <li class="nav-item">
-                     <a
-                       class="nav-link{if !$product.description} active{/if}"
-                       data-toggle="tab"
-                       href="#product-details"
-                       role="tab"
-                       aria-controls="product-details"
-                       {if !$product.description} aria-selected="true"{/if}>{l s='Product Details' d='Shop.Theme.Catalog'}</a>
-                   </li>
-                   {if $product.attachments}
-                     <li class="nav-item">
-                       <a
-                         class="nav-link"
-                         data-toggle="tab"
-                         href="#attachments"
-                         role="tab"
-                         aria-controls="attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a>
-                     </li>
-                   {/if}
-                   {foreach from=$product.extraContent item=extra key=extraKey}
-                     <li class="nav-item">
-                       <a
-                         class="nav-link"
-                         data-toggle="tab"
-                         href="#extra-{$extraKey}"
-                         role="tab"
-                         aria-controls="extra-{$extraKey}">{$extra.title}</a>
-                     </li>
-                   {/foreach}
-                </ul>
+                <div class="des">
+                    {if $product.dwf_biod}<img src="{$product.dwf_biod}" class="top-description-img" />{/if}
+                    {* <ul class="nav nav-tabs" role="tablist">*}
+                    {if $product.description}
 
-           <div class="container">     <div class="tab-content" id="tab-content">
-                    <div class="tab-pane fade in{if $product.description} active{/if}" id="description" role="tabpanel">
+                          <div class="title-descr"> {l s='En quelques mots' d='Shop.Theme.Catalog'}</div>
+
                         {block name='product_description'}
-                            <div class="product-description">{$product.description nofilter}</div>
-                        {/block}
+                                    <div class="product-description">{$product.description nofilter}</div>
+                                {/block}
+                            </div>
+{/if}
+                        {*    {block name='product_details'}
+                                {include file='catalog/_partials/product-details.tpl'}
+                            {/block}*}
+
+
+
+
+                </div>          </div>
+                </div>
+            {/block}
+
+
+
+    <div class="sousli">
+        <div class="container" id="suballprod">
+
+            <div class="blocks-subprod">
+
+                {if $product.dwf_aloe|| ($product.dwf_absokarite) || $product.dwf_beurrekarite || $product.dwf_beurrekaribio || $product.dwf_karitefair || $product.dwf_bleuetbio || $product.dwf_cireabeille || $product.dwf_citronvita || $product.dwf_eauxfruit || $product.dwf_fleurderosier || $product.dwf_nenupharbio || $product.dwf_extraithym || $product.dwf_figuemonteux || $product.dwf_figuesodives ||  $product.dwf_glycenat || $product.dwf_grenadier || $product.dwf_huileamande ||$product.dwf_huileamandevalen || $product.dwf_camediva || $product.dwf_huilecoco || $product.dwf_grignon || $product.dwf_noyauabri || $product.dwf_pepinraisin || $product.dwf_huilericin || $product.dwf_huilesesame || $product.dwf_huilesonriz || $product.dwf_huiletournesol || $product.dwf_huileodivve ||$product.dwf_huileodivvebio || $product.dwf_huilevirant || $product.dwf_huilevirannobio || $product.dwf_calophy || $product.dwf_huimacada || $product.dwf_huilesesam || $product.dwf_mielhaute || $product.dwf_abriconoyau ||$product.dwf_odivbassin ||$product.dwf_popudraloe || $product.dwf_vitae}
+                    <div class="block-compo">
+                        <div class="title-compo1">  {l s='Les' d='Shop.Theme.Special'}</div>
+                        <div class="title-compo2">{l s='Ingrédients stars' d='Shop.Theme.Special'}</div>
+
+                        {if $product.dwf_compoprod}
+                            <button id="btnPopup"
+                                    class="btnPopup link-compo">{l s='Voir la composition du produit' d='Shop.Theme.special'}</button>
+                            <div class="up-orange"></div>
+                            <div id="overlay" class="overlay">
+                                <div id="popup" class="popup">
+                                    <h2 class="title-compo1">
+                                        {l s=' Les ingrédients stars' d='Shop.Theme.Special'}
+                                        <span id="btnClose" class="btnClose">&times;</span>
+                                    </h2>
+                                    <div>
+                                        {$product.dwf_compoprod nofilter}
+                                    </div>
+                                </div>
+                            </div>
+                        <script>
+                            var btnPopup = document.getElementById('btnPopup');
+                            var overlay = document.getElementById('overlay');
+                            btnPopup.addEventListener('click',openMoadl);
+                            function openMoadl() {
+                                overlay.style.display='block';
+                            }
+                            var btnClose = document.getElementById('btnClose');
+                            btnClose.addEventListener('click',closeModal);
+                            function closeModal() {
+                                overlay.style.display='none';
+                            }</script>
+                        {/if}
                     </div>
+                    {include file='catalog/ingredients.tpl'}
 
-                    {block name='product_details'}
-                        {include file='catalog/_partials/product-details.tpl'}
-                    {/block}
+                {/if}
+            </div>
 
-                    {block name='product_attachments'}
-                        {if $product.attachments}
-                            <div class="tab-pane fade in" id="attachments" role="tabpanel">
-                                <section class="product-attachments">
-                                    <p class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</p>
-                                    {foreach from=$product.attachments item=attachment}
-                                        <div class="attachment">
-                                            <h4>
-                                                <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
-                                            </h4>
-                                            <p>{$attachment.description}</p
-                                            <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                                                {l s='Download' d='Shop.Theme.Actions'}
-                                                ({$attachment.file_size_formatted})
-                                            </a>
+                <div class="reuptri">
+                    {if $product.dwf_howork}
+                        <div class="how-work col-md-6">
+                            <div class="how-text">
+                                <div class="work-title">  {l s='Et comment ça' d='Shop.theme.Special'}
+                                    <br/>{l s='marche ?' d='Shop.theme.Special'}</div>
+                                <div class="work-description">
+                                    {$product.dwf_howork nofilter}
+
+                                </div>
+                            </div>
+                            {if $product.dwf_imghowit}
+                                <div class="how-img">
+                                    <img src="{$product.dwf_imghowit}"/>
+
+                                </div>
+                            {else}
+                                <div class="how-img">
+                                    <img src="{$urls.img_url}howork.png""/>
+
+                                </div>
+                            {/if}
+                        </div>
+                    {/if}
+
+                    <div class="col-md-6 right-blocs">
+                        {if $product.dwf_testresult}
+                            <div class="clinifull">
+                                <div class="clinic-test-block col-md-6">
+                                    <div class="clinic-thetext">
+                                        <div class="clinic-title">
+                                            {l s='Résultats' d='Shop.Theme.Special'}<br/>
+                                            {l s='des tests' d='Shop.Theme.Special'}<br/>
+                                            {l s='cliniques' d='Shop.Theme.Special'}</div>
+                                        <button id="btnPopupclinic"
+                                                class="btnPopupclinic link-test">{l s='En savoir +' d='Shop.Theme.Special'}</button>
+                                        <div class="up-orange"></div>
+                                        <div id="overlayclinic" class="overlayclinic">
+                                            <div id="popupclinic" class="popupclinic">
+                                                <h2 class="title-compo1">
+                                                    {l s='Résultats des tests cliniques' d='Shop.Theme.Special'}
+                                                    <span id="btnCloseclinic" class="btnCloseclinic">&times;</span>
+                                                </h2>
+                                                <div>
+                                                    {$product.dwf_testresult nofilter}
+                                                </div>
+                                            </div>
                                         </div>
-                                    {/foreach}
-                                </section>
+                                    </div>
+
+                                </div>
+                                <div class="clinicimg col-md-6">
+                                    <img src="{$urls.img_url}clinictest.png"></div>
+
+                            </div><script>
+                        var btnPopupclinic = document.getElementById('btnPopupclinic');
+                        var overlayclinic = document.getElementById('overlayclinic');
+                        btnPopupclinic.addEventListener('click',openMoadlclinic);
+                        function openMoadlclinic() {
+                        overlayclinic.style.display='block';
+                        }
+                        var btnCloseclinic = document.getElementById('btnCloseclinic');
+                        btnCloseclinic.addEventListener('click',closeModalclinic);
+                        function closeModalclinic() {
+                        overlayclinic.style.display='none';
+                        }
+
+
+
+                        </script>
+                        {/if}
+                        {if $product.dwf_producteurs}
+                            <div class="blocoilproduct">
+                                <div class="bg-green">
+                                    <div class="pl-3 main-oli">   {l s='À la' d='Shop.Theme.Special'}
+                                        <br/> {l s='Rencontre' d='Shop.Theme.Special'}
+                                        <br/> {l s='de nos' d='Shop.Theme.Special'}
+                                        <br/> {l s='producteurs' d='Shop.Theme.Special'}</div>
+                                    <div class="best-compo ml-3">   {l s="D'où viennent nos ingrédients" d='Shop.Theme.Special'}</div>
+                                    <span class="up-brown"></span>
+
+                                </div>
+                                <img src="{$urls.img_url}jeromeoliverproduct.png"
+                                     class="oli-pic-product"/>
                             </div>
                         {/if}
-                    {/block}
-
-                    {foreach from=$product.extraContent item=extra key=extraKey}
-                    <div class="tab-pane fade in {$extra.attr.class}" id="extra-{$extraKey}"
-                         role="tabpanel" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
-                    {$extra.content nofilter}
+                    </div>
                 </div>
-                {/foreach}
+
             </div>
-        </div>
-        {/block}
-    </div>
-    </div>
-    </div>
-<div class="container">
-    {block name='product_accessories'}
-        {if $accessories}
-            <section class="product-accessories clearfix">
-                <p class="h5 text-uppercase">{l s='You might also like' d='Shop.Theme.Catalog'}</p>
-                <div class="products">
-                    {foreach from=$accessories item="product_accessory"}
-                        {block name='product_miniature'}
-                            {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
-                        {/block}
-                    {/foreach}
-                </div>
-            </section>
-        {/if}
-    {/block}
+            <div class="clearfix" style="background:#ffffff;"></div>
 
+            {if $product.dwf_avisprod}
+                <div class="avis-product container">
+
+                    <div class="avis-produit"><img src="{$urls.img_url}etoilepleine.png" alt="" width="36"
+                                                   height="34"/><img
+                                src="{$urls.img_url}etoilepleine.png" alt="" width="36" height="34"/><img
+                                src="{$urls.img_url}etoilepleine.png" alt="" width="36" height="34"/><img
+                                src="{$urls.img_url}etoilepleine.png" alt="" width="36" height="34"/><img
+                                src="{$urls.img_url}etoilepleine.png" alt="" width="36" height="34"/>
+                        <div class="avis">{$product.dwf_avisprod nofilter}
+                        </div>
+                        <div class="auteur-avis">{if $product.dwf_auteuravis}{$product.dwf_auteuravis nofilter}{/if}
+                            . {$product.name} {if $product.features }
+                                {foreach from=$product.features item=feature name=features}
+                                    {if $feature.name == "Senteur"}
+                                        - .s {$feature.value|escape:'html':'UTF-8'}
+                                    {/if}
+                                {/foreach}
+                            {/if}</div>
+                        <a href="#">
+                            <div class="lienavisproduit"> {l s="Lire les autres avis" d='Shop.Theme.Special'}</div>
+                        </a>
+                        <div class="up-orange-avis-cat"></div>
+                    </div>
+
+                </div>
+            {/if}    </div>
+
+
+        <div id="white-accessoiries">
+            {block name='product_accessories'}
+                {if $accessories}
+                    <div class="product-accessories">
+                        <p class="h5 text-uppercase">{l s='Vous allez craquer !' d='Shop.Theme.Special'}</p>
+                        <div class="swiper-container products">
+                            <div class="swiper-wrapper">
+                                {foreach from=$accessories item="product_accessory"}
+                                    {block name='product_miniature'}
+                                        {include file='catalog/_partials/miniatures/product2.tpl' product=$product_accessory}
+                                    {/block}
+                                {/foreach}
+                            </div>
+
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev swiper-button-prev-acc"></div>
+                            <div class="swiper-button-next swiper-button-next-acc"></div>
+                        </div>
+                    </div>
+                    <!-- Swiper JS -->
+
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper('.swiper-container', {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+
+
+                            loop: true,
+
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                        });
+                    </script>
+
+
+                {/if}
+            {/block}
+        </div>
     {block name='product_footer'}
         {hook h='displayFooterProduct' product=$product category=$category}
     {/block}
@@ -277,7 +448,8 @@
             {/block}
         </footer>
     {/block}
-    </section>
+
 
 {/block}
-</div>
+
+

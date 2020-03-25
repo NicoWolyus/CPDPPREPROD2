@@ -22,50 +22,37 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<a href="{$urls.base_url}wishlist/" id="wish-block">
-<div id="wishlist">
-    {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
-<img src="{$urls.img_url}wish.png" id="wish-icon" class="icon-top">
-    {else}
-        <img src="{$urls.img_url}wishblack.png" id="wish-icon" class="icon-top">
-    {/if}
-
-</div>
-
-</a>
 
 
 
 <div id="_desktop_user_info">
     <div class="user-info">
         {if $logged}
-            <a
-                    class="logout hidden-sm-down"
-                    href="{$logout_url}"
-                    rel="nofollow"
-            >
 
-                {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
-
-                <img src="{$urls.img_url}account.png" class="icon-top">
-                {else}
-                <img src="{$urls.img_url}accountblack.png"  class="icon-top">
-                {/if}
-
-            </a>
             <a
                     class="account"
                     href="{$my_account_url}"
                     title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
                     rel="nofollow"
             >
+                {if $page.page_name == 'index'}
+                    <img src="{$urls.img_url}account.png" class="icon-top">
+                {elseif  $page.page_name == 'category'}
+                    {if $category.id == '329' || $category.id == '324' || $category.id == '325' || $category.id == '326' || $category.id == '327' || $category.id == '328' || $category.id == '330' || $category.id == '331' || $category.id == '332' || $category.id == '333' || $category.id == '334' || $category.id == '335' || $category.id == '336' || $category.id == '334' || $category.id == '337' || $category.id == '343' ||$category.id == '345' || $category.id == '346' || $category.id == '347'}
 
-                {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
-
-                <img src="{$urls.img_url}account.png" class="icon-top">
+                        <img src="{$urls.img_url}account.png" class="icon-top">
+                    {elseif $category.id != '329' || $category.id != '324' || $category.id != '333' || $category.id != '337' || $category.id != '343'}
+                        <img src="{$urls.img_url}accountblack.png" class="icon-top">
+                    {/if}
                 {else}
-                <img src="{$urls.img_url}accountblack.png" class="icon-top">
+                    <img src="{$urls.img_url}accountblack.png" class="icon-top">
                 {/if}
+
+
+
+
+
+
 
              {*   <span class="hidden-sm-down">{$customerName}</span>*}
             </a>
@@ -75,12 +62,20 @@
                     title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
                     rel="nofollow"
             >
-                {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
 
-                <img src="{$urls.img_url}account.png" class="icon-top">
+                {if $page.page_name == 'index'}
+                    <img src="{$urls.img_url}account.png" class="icon-top">
+                {elseif  $page.page_name == 'category'}
+                    {if $category.id == '329' || $category.id == '324' || $category.id == '325' || $category.id == '326' || $category.id == '327' || $category.id == '328' || $category.id == '330' || $category.id == '331' || $category.id == '332' || $category.id == '333' || $category.id == '334' || $category.id == '335' || $category.id == '336' || $category.id == '334' || $category.id == '337' || $category.id == '343' ||$category.id == '345' || $category.id == '346' || $category.id == '347'}
+
+                        <img src="{$urls.img_url}account.png" class="icon-top">
+                    {elseif $category.id != '329' || $category.id != '324' || $category.id != '333' || $category.id != '337' || $category.id != '343'}
+                        <img src="{$urls.img_url}accountblack.png" class="icon-top">
+                    {/if}
                 {else}
-                <img src="{$urls.img_url}accountblack.png" class="icon-top">
+                    <img src="{$urls.img_url}accountblack.png" class="icon-top">
                 {/if}
+
             </a>
         {/if}
     </div>

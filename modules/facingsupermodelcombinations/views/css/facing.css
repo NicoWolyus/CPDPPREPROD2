@@ -1,0 +1,15 @@
+.facing label.col-lg-3{
+    width:45%;
+}
+.facing-product-variants>.product-variants-item select {
+    background-color: #fff;
+    width: auto;
+    padding-right: 1.875rem;
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,.2);
+}
+.facing-product-variants>.product-variants-item ul li {
+    margin-right: .625rem;
+}
+.product-variants-item li.selected a{
+    border : solid 2px #000;
+}

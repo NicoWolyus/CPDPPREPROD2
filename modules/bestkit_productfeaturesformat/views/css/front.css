@@ -1,0 +1,8 @@
+.bestkit_pfeature {}
+.bestkit_pfeature li.bestkit_pitem { display:inline-block; vertical-align:top; margin-bottom: 2px; }
+.bestkit_pfeature li.bestkit_pitem a { display:inline-block; vertical-align:top; padding:2px 6px; font-size:12px; font-weight:bold; white-space:nowrap; background:#ccc; color:#000; }
+.bestkit_pfeature li.bestkit_pitem a:hover { background:#eee; }
+.bestkit_pfeature.is_color li.bestkit_pitem a { border:1px solid #aaa; font:0/0 a; padding:0; width:30px; height:30px; }
+.bestkit_pfeature.is_color li.bestkit_pitem a:hover { border-color:#222; }
+.bestkit_pfeature.is_color li.bestkit_pitem a span { display:none; }
+.bestkit_pfeature_label { font-weight: bold; }

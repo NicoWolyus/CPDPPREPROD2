@@ -55,6 +55,8 @@
               </span>
             {/if}
           {/if}
+            {if $product.dwf_madineprovence}<div class="abelproductprov">  <span class="madinpro-product">{l s='Made in Provence' d='Shop.Theme.Special'}</span><div class="up-orange-product"></div></div>{/if}
+            {if $product.dwf_madeinfrance}<div class="abelproductprov">  <span class="madinpro-product">{l s='Made in France' d='Shop.Theme.Special'}</span><div class="up-orange-product"></div></div>{/if}
         </div>
 
         {block name='product_unit_price'}
@@ -62,6 +64,7 @@
             <p class="product-unit-price sub">{l s='(%unit_price%)' d='Shop.Theme.Catalog' sprintf=['%unit_price%' => $product.unit_price_full]}</p>
           {/if}
         {/block}
+
       </div>
     {/block}
 

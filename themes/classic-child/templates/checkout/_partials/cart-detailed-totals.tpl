@@ -31,7 +31,7 @@
         <div class="cart-summary-line" id="cart-subtotal-{$subtotal.type}">
           <span class="label{if 'products' === $subtotal.type} js-subtotal{/if}">
             {if 'products' == $subtotal.type}
-              {$cart.summary_string}
+                {l s ='Sous total' d='Shop.Theme.Special'}
             {else}
               {$subtotal.label}
             {/if}
@@ -40,19 +40,28 @@
             {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
           </span>
           {if $subtotal.type === 'shipping'}
-              <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div>
+              <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div
+              <div class="freeshipcart">{l s ='Livraison offerte à partir de 55€ d\'achat' d='Shop.Theme.Special'}</div>
+
+           {if (($cart.totals.total.amount)+($cart.subtotals.tax.amount))<55}
+
+               <div class="label js-subtotal montant-free">{l s ='Plus que' d='Shop.Theme.Special'} {55-(($cart.totals.total.amount)+($cart.subtotals.tax.amount))}€ {l s ='pour en profiter' d='Shop.Theme.Special'}
+               </div>
+           {/if}
+
+
           {/if}
         </div>
       {/if}
     {/foreach}
   </div>
-
+    {block name='cart_voucher'}
+        {include file='checkout/_partials/cart-voucher.tpl'}
+    {/block}
   {block name='cart_summary_totals'}
     {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
   {/block}
 
-  {block name='cart_voucher'}
-    {include file='checkout/_partials/cart-voucher.tpl'}
-  {/block}
+
 </div>
 {/block}

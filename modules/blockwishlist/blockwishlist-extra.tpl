@@ -22,25 +22,3 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-{if isset($wishlists) && count($wishlists) > 1}
-    <div class="buttons_bottom_block no-print panel-product-line panel-product-actions">
-    	<div id="wishlist_button">
-    		<button class="wishlist_button_extra" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value, $('#idWishlist').val()); return false;"  title="{l s='Add to wishlist' mod='blockwishlist'}">
-
-                {l s='Ajouter à la liste de souhait' mod='blockwishlist'}
-    		</button>
-            <select id="idWishlist">
-    			{foreach $wishlists as $wishlist}
-    				<option value="{$wishlist.id_wishlist}">{$wishlist.name}</option>
-    			{/foreach}
-    		</select>
-    	</div>
-    </div>
-{else}
-    <p class="panel-product-line panel-product-actions">
-    	<a id="wishlist_button" href="#" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow"  class="quick-wish-block" title="{l s='Add to my wishlist' mod='blockwishlist'}">
-
-			<img class="quick-wish" src="{$urls.img_url}wish.png" alt="add to wishlist">
-    	</a>
-    </p>
-{/if}

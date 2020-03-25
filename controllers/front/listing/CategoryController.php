@@ -127,6 +127,8 @@ class CategoryControllerCore extends ProductListingFrontController
      */
     public function initContent()
     {
+
+
         parent::initContent();
 
         if ($this->category->checkAccess($this->context->customer->id)) {

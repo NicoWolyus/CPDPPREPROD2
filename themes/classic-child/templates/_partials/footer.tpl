@@ -27,135 +27,57 @@
     <div class="container">
         <div class="row">
     <div class="col-md-3 rea-block">
-        <img class="rea-footer" src="{$urls.img_url}rea-livraison.png">
-
+     <div class="reaimg">   <img class="rea-footer" src="{$urls.img_url}rea-livraison.png"></div>
+<div class="reatext">
         <div class="rea-title">Livraison soignée</div>
         <div class="rea-des">Emaballée avec amour</div>
 
-    </div>
+    </div></div>
     <div class="col-md-3 rea-block">
 
-        <img class="rea-footer" src="{$urls.img_url}rea-shop.png">
-
+        <div class="reaimg">   <img class="rea-footer" src="{$urls.img_url}rea-shop.png"></div>
+        <div class="reatext">
         <div class="rea-title">Venez nous rencontrer</div>
         <div class="rea-des">Dans l'une de nos boutiques</div>
 
-    </div>
+        </div></div>
     <div class="col-md-3 rea-block">
 
-        <img class="rea-footer" src="{$urls.img_url}rea-sample.png">
-
+        <div class="reaimg">   <img class="rea-footer" src="{$urls.img_url}rea-sample.png"></div>
+        <div class="reatext">
         <div class="rea-title">Échantillons offerts</div>
         <div class="rea-des">Choisissez vos favoris</div>
-
+        </div>
     </div>
     <div class="col-md-3 rea-block">
-        <img class="rea-footer" src="{$urls.img_url}rea-provence.png">
-
+        <div class="reaimg">   <img class="rea-footer" src="{$urls.img_url}rea-provence.png"></div>
+        <div class="reatext">
         <div class="rea-title">Designed in provence</div>
         <div class="rea-des">avec le sourire</div>
-
+        </div>
 
     </div>
         </div>
     </div>
 
-    <div class="container">
+   {* <div class="container">
         <div class="row">
             {block name='hook_footer_before'}
                 {hook h='displayFooterBefore'}
             {/block}
 
         </div>
-    </div>
+    </div>*}
     <div class="footer-container">
         <div class="container">
             <div class="row">
                 {block name='hook_footer'}
                     {hook h='displayFooter'}
                 {/block}
-            </div>
-            <div class="social-media">
-                <a href="fb" class="social-folone">   <img class="social-follow" src="{$urls.img_url}facebook.png" alt="facebook"> </a>
-                <a href="instagram" class="social-folone">   <img class="social-follow" src="{$urls.img_url}instagram.png" alt="instagram"> </a>
-                <a href="pinterest" class="social-folone">   <img class="social-follow" src="{$urls.img_url}pinterest.png" alt="pinterest"> </a>
-                <a href="linkedin" class="social-folone">   <img class="social-follow" src="{$urls.img_url}linkedin.png" alt="linkedin"> </a>
-
-
 
             </div>
-            <div class="custom-footer">
-
-                <div class="col-md-12 p-0">
-                    <div class="col-md-2 pl-0">
-                        <div class="tittle-footer">
-                            E-shop
-                        </div>
-                        <ul class="category-footer">
-                            <li>Savon de Marseille</li>
-                            <li>Soin du visage</li>
-                            <li>Savon des mains</li>
-                            <li>Savon du corps</li>
-                            <li>Maison</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 pl-0">
-                        <div class="tittle-footer">
-                            La Marque
-                        </div>
-                        <ul class="category-footer">
-                            <li>Qui sommes-nous ?</li>
-                            <li>Nos collections</li>
-                            <li>Recrutement</li>
-
-                        </ul>
-                    </div>
-
-                    <div class="col-md-2 pl-0">
-                        <div class="tittle-footer">
-                            Nos boutiques
-                        </div>
-                        <ul class="category-footer">
-                            <li>Points de vente</li>
-
-                        </ul>
-                        <div class="tittle-footer">
-                            Le journal
-                        </div>
-                        <ul class="category-footer">
-                            <li>Le journal</li>
-
-                        </ul>
-
-                    </div>
-                    <div class="col-md-2 pl-0">
-                        <li>Contactez-nous</li>
-                        <li>CGV</li>
-                        <li>Programme de fidélité</li>
-                        <li>FAQ</li>
-
-                    </div>
-                    <div class="col-md-4">
-                        <li>Presse</li>
-                        <li>Devenir revendeur ou distributeur</li>
-                        <div class="eco-disclaim col-md-12">
-                            <img class="logo img-responsive col-md-2 p-0" src="{$urls.img_url}eco.png" alt="{$shop.name}">
-                            <div class="eco-slaim col-md-10">
-Pensez à trier vos emballages ! Pour en savoir plus sur les consignes de tri en France www.consignesdetri.fr
 
 
-                </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
             <div class="row">
                 {block name='hook_footer_after'}
                     {hook h='displayFooterAfter'}
@@ -166,11 +88,13 @@ Pensez à trier vos emballages ! Pour en savoir plus sur les consignes de tri en
                 <div class="col-md-12 footer-copy">
                     <p class="text-sm-center">
                         {block name='copyright_link'}
-                            <a class="_blank" href="https://www.prestashop.com" target="_blank" rel="nofollow" id="copy">
+                            <a class="_blank" href="" target="_blank" rel="nofollow" id="copy">
                                 Compagnie de Provence 2019 - Tous droits reservés
                            </a>
+
                         {/block}
                     </p>
+
                 </div>
             </div>
         </div>

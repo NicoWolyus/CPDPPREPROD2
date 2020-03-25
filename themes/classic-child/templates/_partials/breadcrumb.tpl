@@ -35,6 +35,17 @@
           </li>
         {/block}
       {/foreach}
+
+        {if $product.features }
+            {foreach from=$product.features item=feature name=features}
+                {if $feature.name == "Senteur"}
+                    <span class="defaultdeclibread">{$feature.value|escape:'html':'UTF-8'}<br/></span>
+                {/if}
+            {/foreach}
+        {/if}
+
+
+
     {/block}
   </ol>
 </nav>

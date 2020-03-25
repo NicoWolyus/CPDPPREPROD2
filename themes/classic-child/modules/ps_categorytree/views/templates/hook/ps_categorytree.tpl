@@ -23,6 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if $page.page_name == 'category'}
+{if $category.id == '329' || $category.id == '324' || $category.id == '325' || $category.id == '326' || $category.id == '327' || $category.id == '328' || $category.id == '330' || $category.id == '331' || $category.id == '332' || $category.id == '333' || $category.id == '334' || $category.id == '335' || $category.id == '336' || $category.id == '334' || $category.id == '337' || $category.id == '343' ||$category.id == '345' || $category.id == '346' || $category.id == '347'}
 
   {block name='product_list_header'}
     {include file='catalog/_partials/category-header.tpl' listing=$listing category=$category}
@@ -30,6 +31,7 @@
 {function name="categories" nodes=[] depth=0}
   {strip}
     {if $nodes|count}
+
       <ul class="category-sub-menu">
         {foreach from=$nodes item=node}
           <li data-depth="{$depth}">
@@ -58,16 +60,33 @@
             {/if}
           </li>
         {/foreach}
-        <li class="custom-filters"><img src="{$urls.img_url}filter.png" alt="filters" class="filterscat">+ de filtres</li>
+        <li class="custom-filters" id="cust-filt"><img src="{$urls.img_url}filter.png" alt="filters" class="filterscat" id="filtercat">+ de filtres</li>
       </ul>
     {/if}
   {/strip}
 {/function}
-
-<div class="block-categories hidden-sm-down">
+    <div class="col-md-1 hidden-sm-down total-products">
+        {if $listing.pagination.total_items > 1}
+            <p>{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
+        {elseif $listing.pagination.total_items > 0}
+            <p>{l s='There is 1 product.' d='Shop.Theme.Catalog'}</p>
+        {/if}
+        <img src="{$urls.img_url}arrowbottom.png" id="arrowbotcategory">
+    </div>
+<div class="block-categories">
   <ul class="category-top-menu">
 
     <li>{categories nodes=$categories.children}</li>
   </ul>
 </div>
+{/if}
+    <script>document.querySelector("#cust-filt").onclick = function () {
+            if (window.getComputedStyle(document.querySelector('#search_filters')).display == 'none') {
+                document.querySelector("#search_filters").style.display = "block";
+            } else {
+                document.querySelector("#search_filters").style.display = "none";
+            }
+
+        }
+    </script>
 {/if}

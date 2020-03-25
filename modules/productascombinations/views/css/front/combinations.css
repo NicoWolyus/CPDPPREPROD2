@@ -1,0 +1,51 @@
+.bordobollino {
+    width:56px;
+    height:56px;
+    float: left;
+    cursor: pointer;
+}
+
+.bollinoselected {
+    border:2px solid gray;
+    padding: 2px;
+    position: relative;
+}
+
+.bollinounselected {
+    padding: 4px;
+}
+
+.selectedtriangle {
+    position: absolute;
+    bottom: 0px;
+    width: 0;
+    height: 0;
+    right: 0px;
+    border-bottom: 10px solid black;
+    border-left: 10px solid transparent;
+}
+
+.selectimage {
+    width:16px;
+    height:16px;
+}
+
+#bolliniselect {
+    width: 500px;
+}
+
+#subselect {
+    width: 200px;
+}
+
+#subselect_msdd {
+    margin-bottom: 10px;
+}
+
+#bolliniselect_msdd {
+    margin-bottom: 10px;
+}
+
+.ps-hidden-by-js {
+  display:none;
+}

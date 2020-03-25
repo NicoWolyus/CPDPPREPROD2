@@ -7726,7 +7726,7 @@ textarea:active:-moz-placeholder {
     border: 0 none;
     outline: 0 none;
     color: #232323;
-    background: #fff
+    background: none;
 }
 
 .dropdown-item:focus,

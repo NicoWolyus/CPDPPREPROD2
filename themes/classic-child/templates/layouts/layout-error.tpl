@@ -42,7 +42,7 @@
 
   </head>
 
-  <body>
+  <body style="background:black;color:white;">
 
     <div id="layout-error">
       {block name='content'}

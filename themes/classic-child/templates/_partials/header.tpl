@@ -25,74 +25,66 @@
 
 
 
-{block name='header_banner'}
-    <div class="header-banner">
-        {hook h='displayNav1'}
+{if $page.page_name == 'index'}
+    [creativeslider id="3"]
+    [creativeslider id="2"]
+{/if}
+{hook h='displayNav1'}
 
-    </div>
-{/block}
 
 {block name='header_nav'}
-    <nav class="header-nav">
+<nav class="header-nav">
     {hook h='displayNavFullWidth'}
-    <div class="container p-0">
-    <div class="row">
+
+    <div class="container">
+
     {block name='header_top'}
         <div class="header-top">
 
-            <div class="col-md-3 hidden-sm-down" id="_desktop_logo">
-                {if $page.page_name == 'index' || $page.page_name == 'category' && $category.level_depth == 2}
+            <div class="col-md-3" id="_desktop_logo">
+
+                {if $page.page_name == 'index'}
                     <h1>
                         <a href="{$urls.base_url}">
                             <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
                         </a>
                     </h1>
+                {elseif $page.page_name == 'category'}
+                    {if $category.id == '329' || $category.id == '324' || $category.id == '325' || $category.id == '327' || $category.id == '326' || $category.id == '328' || $category.id == '330' || $category.id == '331' || $category.id == '332' || $category.id == '333' || $category.id == '334' || $category.id == '335' || $category.id == '336' || $category.id == '334' || $category.id == '337' || $category.id == '343' ||$category.id == '345' || $category.id == '346' || $category.id == '347'}
+                        <a href="{$urls.base_url}">
+                            <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+                        </a>
+                    {else}
+                        <a href="{$urls.base_url}">
+                            <img class="logo img-responsive" src="{$urls.img_url}logonoir.png" alt="{$shop.name}">
+                        </a>
+                    {/if}
                 {else}
                     <a href="{$urls.base_url}">
                         <img class="logo img-responsive" src="{$urls.img_url}logonoir.png" alt="{$shop.name}">
                     </a>
                 {/if}
+
             </div>
             {*    <div class="col-md-1 col-sm-12 position-static">
                     {hook h='displayTop'}
                     <div class="clearfix"></div>
                 </div>*}
 
-            <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
-                <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-                <div class="js-top-menu-bottom">
-                    <div id="_mobile_currency_selector"></div>
-                    <div id="_mobile_language_selector"></div>
-                    <div id="_mobile_contact_link"></div>
-                </div>
-            </div>
-            <div class="col-md-9 right-nav">
+
+            <div class="col-md-3 col-xs-6 right-nav">
                 {hook h='displayNav2'}
             </div>
         </div>
         </div>
-        </div>
 
         </div>
-        <div class="hidden-md-up text-sm-center mobile">
-            <div class="float-xs-left" id="menu-icon">
-                <i class="material-icons d-inline">&#xE5D2;</i>
-            </div>
-            <div class="float-xs-right" id="_mobile_cart"></div>
-            <div class="float-xs-right" id="_mobile_user_info"></div>
-            <div class="top-logo" id="_mobile_logo"></div>
-            <div class="clearfix"></div>
-        </div>
-        </div>
-        </div>
+
         </nav>
 
     {/block}
 
-    {if $page.page_name == 'index'}
-        [creativeslider id="3"]
-        [creativeslider id="2"]
-    {/if}
+
 
 
 

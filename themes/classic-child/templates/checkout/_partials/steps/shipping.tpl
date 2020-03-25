@@ -28,7 +28,7 @@
   <div id="hook-display-before-carrier">
     {$hookDisplayBeforeCarrier nofilter}
   </div>
-
+<div class="chooseit">{l s ='Choisissez un mode de livraison' d='Shop.Theme.Special'}</div>
   <div class="delivery-options-list">
     {if $delivery_options|count}
       <form
@@ -42,45 +42,45 @@
             <div class="delivery-options">
               {foreach from=$delivery_options item=carrier key=carrier_id}
                   <div class="row delivery-option">
-                    <div class="col-sm-1">
-                      <span class="custom-radio float-xs-left">
-                        <input type="radio" name="delivery_option[{$id_address}]" id="delivery_option_{$carrier.id}" value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
-                        <span></span>
-                      </span>
-                    </div>
-                    <label for="delivery_option_{$carrier.id}" class="col-sm-11 delivery-option-2">
+
+                    <label for="delivery_option_{$carrier.id}" class="col-sm-10 delivery-option-2">
                       <div class="row">
-                        <div class="col-sm-5 col-xs-12">
+                        <div class="col-md-10 pl-0">
                           <div class="row">
                             {if $carrier.logo}
-                            <div class="col-xs-3">
+                            <div class="col-xs-3 logcarri">
                                 <img src="{$carrier.logo}" alt="{$carrier.name}" />
                             </div>
                             {/if}
-                            <div class="{if $carrier.logo}col-xs-9{else}col-xs-12{/if}">
+                            <div class="{if $carrier.logo}col-xs-9{else}col-xs-12{/if}" id="textincarrier">
                               <span class="h6 carrier-name">{$carrier.name}</span>
+                              <span class="carrier-delay">{$carrier.delay}</span>
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-4 col-xs-12">
-                          <span class="carrier-delay">{$carrier.delay}</span>
-                        </div>
-                        <div class="col-sm-3 col-xs-12">
-                          <span class="carrier-price">{$carrier.price}</span>
-                        </div>
+
+
                       </div>
                     </label>
-                  </div>
+                    <div class="col-md-2 right-ship">
+                      <span class="carrier-price">{$carrier.price}</span>
+                      <div class="custom-radio">
+                        <input type="radio" name="delivery_option[{$id_address}]" id="delivery_option_{$carrier.id}" value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
+                        <span></span>
+                      </div>
+                    </div>  </div>
                   <div class="row carrier-extra-content"{if $delivery_option != $carrier_id} style="display:none;"{/if}>
                     {$carrier.extraContent nofilter}
                   </div>
+
                   <div class="clearfix"></div>
               {/foreach}
             </div>
           {/block}
           <div class="order-options">
             <div id="delivery">
-              <label for="delivery_message">{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Checkout'}</label>
+              <div class="rensi">{l s ='Renseigenements' d='Shop.Theme.Special'}</div>
+              <label for="delivery_message" class="delimesg">{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Checkout'}</label>
               <textarea rows="2" cols="120" id="delivery_message" name="delivery_message">{$delivery_message}</textarea>
             </div>
 

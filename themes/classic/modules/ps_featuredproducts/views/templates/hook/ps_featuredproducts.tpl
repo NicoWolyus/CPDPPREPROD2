@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="featured-products clearfix">
+<section class="featured-products">
   <h2 class="h2 products-section-title text-uppercase">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </h2>
